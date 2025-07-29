@@ -35,34 +35,36 @@ const QuizPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-purple-700 to-orange-500 text-white">
-      <main className="flex-grow p-6 pb-24 overflow-y-auto">
+      <main className="flex-grow p-6">
         <QuizCard
           data={currentQuestion}
           selected={selected}
           setSelected={setSelected}
         />
-      </main>
 
-      {/* Fixed Pagination */}
-      <footer className="fixed bottom-12 left-0 right-0 bg-purple-800 text-white w-full p-4 shadow-inner z-40">
-        <div className="max-w-3xl mx-auto flex justify-between items-center">
-          <button
-            onClick={goPrev}
-            disabled={questionIndex === 0}
-            className="px-4 py-2 bg-purple-600 text-white rounded disabled:opacity-50"
-          >
-            Prev
-          </button>
-          <p className="text-sm">Question {questionIndex + 1} of {data.length}</p>
-          <button
-            onClick={goNext}
-            disabled={questionIndex + 1 === data.length}
-            className="px-4 py-2 bg-purple-600 text-white rounded disabled:opacity-50"
-          >
-            Next
-          </button>
+        {/* Pagination in normal flow */}
+        <div className="mt-8 bg-purple-800 p-4 rounded shadow-inner">
+          <div className="max-w-3xl mx-auto flex justify-between items-center">
+            <button
+              onClick={goPrev}
+              disabled={questionIndex === 0}
+              className="px-4 py-2 bg-purple-600 text-white rounded disabled:opacity-50"
+            >
+              Prev
+            </button>
+            <p className="text-sm">
+              Question {questionIndex + 1} of {data.length}
+            </p>
+            <button
+              onClick={goNext}
+              disabled={questionIndex + 1 === data.length}
+              className="px-4 py-2 bg-purple-600 text-white rounded disabled:opacity-50"
+            >
+              Next
+            </button>
+          </div>
         </div>
-      </footer>
+      </main>
     </div>
   );
 };
