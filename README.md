@@ -1,12 +1,29 @@
-# React + Vite
+# 🧠 JavaScript Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive web-based quiz application built with **React**, **Vite**, and **Tailwind CSS**. It allows users to test their JavaScript knowledge with dynamic questions, pagination, and instant feedback.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Visit the App](https://javascript-quizzz-app.netlify.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🖼️ Features
+
+- 🎯 Start Quiz page with call-to-action
+- 🧩 Multiple-choice questions with explanation
+- 📄 Dynamic pagination (visit any question)
+- ✅ Real-time answer feedback popup
+- 📱 Fully responsive design (mobile & desktop)
+- 🧭 Navigation bar with Home and More Quiz links
+- 📥 Footer available across pages
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚡ [Vite](https://vitejs.dev/) — blazing-fast development
+- ⚛️ [React](https://reactjs.org/)
+- 💨 [Tailwind CSS](https://tailwindcss.com/)
+- 🔗 [React Router](https://reactrouter.com/)
+- 🌐 [Netlify](https://www.netlify.com/) for deployment
