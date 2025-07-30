@@ -9,7 +9,9 @@
             "D": "null"
         },
         "answer": "B",
-        "explanation": "The `||` operator returns the first truthy value. `false` is falsy, `{}` is truthy, so `result` becomes `{}`."
+        "explanation": "The `||` operator returns the first truthy value. `false` is falsy, `{}` is truthy, so `result` becomes `{}`.",
+        "difficulty": "easy",
+        "category": "logical operators"
     },
     {
         "id": 2,
@@ -21,7 +23,9 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "The `||` operator returns the first truthy value. Since all values are falsy, it returns the last one which is `\"\"`."
+        "explanation": "The `||` operator returns the first truthy value. Since all values are falsy, it returns the last one which is `\"\"`.",
+        "difficulty": "easy",
+        "category": "logical operators"
     },
     {
         "id": 3,
@@ -33,7 +37,9 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "The `||` operator returns the first truthy value. `true` is truthy, so it is returned immediately without evaluating the rest."
+        "explanation": "The `||` operator returns the first truthy value. `true` is truthy, so it is returned immediately without evaluating the rest.",
+        "difficulty": "easy",
+        "category": "logical operators"
     },
     {
         "id": 4,
@@ -45,19 +51,9 @@
             "D": "undefined"
         },
         "answer": "A",
-        "explanation": "Both emojis are identical string literals. JavaScript compares them by value, and since they are the same, the result is `true`."
-    },
-    {
-        "id": 5,
-        "question": "What will be the output of the following?\n\nlet data = \"true\";\nconsole.log(!data);",
-        "options": {
-            "A": "false",
-            "B": "true",
-            "C": "\"false\"",
-            "D": "undefined"
-        },
-        "answer": "A",
-        "explanation": "`data` is a non-empty string which is truthy. Using `!data` negates it to `false`."
+        "explanation": "Both emojis are identical string literals. JavaScript compares them by value, and since they are the same, the result is `true`.",
+        "difficulty": "easy",
+        "category": "equality comparison"
     },
     {
         "id": 6,
@@ -69,7 +65,9 @@
             "D": "\"false\""
         },
         "answer": "B",
-        "explanation": "The string \"false\" is a non-empty string, so it is truthy. `!!data` converts it to boolean: first `!data` becomes false, then `!false` becomes true."
+        "explanation": "The string \"false\" is a non-empty string, so it is truthy. `!!data` converts it to boolean: first `!data` becomes false, then `!false` becomes true.",
+        "difficulty": "easy",
+        "category": "type coercion"
     },
     {
         "id": 7,
@@ -81,7 +79,9 @@
             "D": "NaN, number"
         },
         "answer": "C",
-        "explanation": "`+true` converts the boolean `true` to a number, which is `1`. The type of `1` is `number`."
+        "explanation": "`+true` converts the boolean `true` to a number, which is `1`. The type of `1` is `number`.",
+        "difficulty": "easy",
+        "category": "type coercion"
     },
     {
         "id": 8,
@@ -93,7 +93,9 @@
             "D": "true, object"
         },
         "answer": "B",
-        "explanation": "The string \"neel\" is a non-empty string, so it's truthy. `!\"neel\"` becomes `false`. The type of any string literal is `string`."
+        "explanation": "The string \"neel\" is a non-empty string, so it's truthy. `!\"neel\"` becomes `false`. The type of any string literal is `string`.",
+        "difficulty": "easy",
+        "category": "type coercion"
     },
     {
         "id": 9,
@@ -105,7 +107,9 @@
             "D": "false, true, false"
         },
         "answer": "B",
-        "explanation": "`false == []` is true because both convert to 0. `false == ![]` is false because `![]` is false, so `false == false`. `\"\" == []` is true because both become `\"\"` and then 0, so `0 == 0`."
+        "explanation": "`false == []` is true because both convert to 0. `false == ![]` is false because `![]` is false, so `false == false`. `\"\" == []` is true because both become \"\" and then 0, so `0 == 0`.",
+        "difficulty": "medium",
+        "category": "type coercion"
     },
     {
         "id": 10,
@@ -117,7 +121,9 @@
             "D": "true, false, true, false"
         },
         "answer": "C",
-        "explanation": "In JavaScript, objects and arrays are compared by reference, not by value. Each `[]` and `{}` is a new object, so comparing them with `==` or `===` returns `false`."
+        "explanation": "In JavaScript, objects and arrays are compared by reference, not by value. Each `[]` and `{}` is a new object, so comparing them with `==` or `===` returns `false`.",
+        "difficulty": "medium",
+        "category": "reference comparison"
     },
     {
         "id": 11,
@@ -129,7 +135,9 @@
             "D": "true, false, false"
         },
         "answer": "A",
-        "explanation": "`!!` converts a value to its boolean equivalent. `null` and `\"\"` are falsy, so `!!null` and `!!\"\"` return false. `1` is truthy, so `!!1` returns true."
+        "explanation": "`!!` converts a value to its boolean equivalent. `null` and `\"\"` are falsy, so `!!null` and `!!\"\"` return false. `1` is truthy, so `!!1` returns true.",
+        "difficulty": "easy",
+        "category": "type coercion"
     },
     {
         "id": 12,
@@ -141,7 +149,9 @@
             "D": "false, true"
         },
         "answer": "C",
-        "explanation": "`isNaN(\"neel\")` is true because the string cannot be converted to a number. `isNaN(23)` is false because it's a valid number."
+        "explanation": "`isNaN(\"neel\")` is true because the string cannot be converted to a number. `isNaN(23)` is false because it's a valid number.",
+        "difficulty": "easy",
+        "category": "type checking"
     },
     {
         "id": 13,
@@ -153,7 +163,9 @@
             "D": "NaN, 1, false"
         },
         "answer": "B",
-        "explanation": "`+false` is `0`, `+true` is `1`. `!\"Neel\"` is `false` because non-empty strings are truthy and the `!` operator negates that."
+        "explanation": "`+false` is `0`, `+true` is `1`. `!\"Neel\"` is `false` because non-empty strings are truthy and the `!` operator negates that.",
+        "difficulty": "easy",
+        "category": "type coercion"
     },
     {
         "id": 14,
@@ -165,7 +177,9 @@
             "D": "false, false, false"
         },
         "answer": "A",
-        "explanation": "`null == 0` is false because loose equality does not convert `null` to a number. `null > 0` is false, but `null >= 0` is true because `null` gets converted to `0` for relational comparison."
+        "explanation": "`null == 0` is false because loose equality does not convert `null` to a number. `null > 0` is false, but `null >= 0` is true because `null` gets converted to `0` for relational comparison.",
+        "difficulty": "medium",
+        "category": "type coercion"
     },
     {
         "id": 15,
@@ -177,7 +191,9 @@
             "D": "false, false, true, true, true"
         },
         "answer": "A",
-        "explanation": "`-1 == 1` and `-1 === 1` are false due to different values. `-0 == 0` and `-0 === 0` are both true in JavaScript. However, `Object.is(-0, 0)` returns false because it distinguishes `-0` from `0`."
+        "explanation": "`-1 == 1` and `-1 === 1` are false due to different values. `-0 == 0` and `-0 === 0` are both true in JavaScript. However, `Object.is(-0, 0)` returns false because it distinguishes `-0` from `0`.",
+        "difficulty": "medium",
+        "category": "equality comparison"
     },
     {
         "id": 16,
@@ -189,7 +205,9 @@
             "D": "true, false"
         },
         "answer": "B",
-        "explanation": "The `!typeof fname` part evaluates first due to operator precedence. `typeof fname` returns `'string'`, so `!typeof fname` becomes `false`. Then you get `false === \"object\"` and `false === \"string\"`, both of which are false."
+        "explanation": "The `!typeof fname` part evaluates first due to operator precedence. `typeof fname` returns `'string'`, so `!typeof fname` becomes `false`. Then you get `false === \"object\"` and `false === \"string\"`, both of which are false.",
+        "difficulty": "medium",
+        "category": "operator precedence"
     },
     {
         "id": 17,
@@ -201,7 +219,9 @@
             "D": "TypeError"
         },
         "answer": "A",
-        "explanation": "Both `a` and `b` are strings with the same value. Template literals (backticks) and double quotes both produce string primitives, so strict equality returns true."
+        "explanation": "Both `a` and `b` are strings with the same value. Template literals (backticks) and double quotes both produce string primitives, so strict equality returns true.",
+        "difficulty": "easy",
+        "category": "template literals"
     },
     {
         "id": 18,
@@ -213,7 +233,9 @@
             "D": "ReferenceError, object, string, NaN, number"
         },
         "answer": "A",
-        "explanation": "`typeof Neel` gives `undefined` (Neel is not declared). `typeof new String(\"\")` returns `object`, `typeof String(\"\")` returns `string`, `typeof NaN` is `number`, and `typeof typeof 1` is `string` because `typeof 1` returns `'number'` which is a string."
+        "explanation": "`typeof Neel` gives `undefined` (Neel is not declared). `typeof new String(\"\")` returns `object`, `typeof String(\"\")` returns `string`, `typeof NaN` is `number`, and `typeof typeof 1` is `string` because `typeof 1` returns `'number'` which is a string.",
+        "difficulty": "hard",
+        "category": "typeof operator"
     },
     {
         "id": 19,
@@ -225,7 +247,9 @@
             "D": "true, false"
         },
         "answer": "B",
-        "explanation": "`new String(\"JS\")` creates a String object. Using `===` compares object with primitive, which is false. `==` converts the object to its primitive (`\"JS\"`) and compares, so it's true."
+        "explanation": "`new String(\"JS\")` creates a String object. Using `===` compares object with primitive, which is false. `==` converts the object to its primitive (`\"JS\"`) and compares, so it's true.",
+        "difficulty": "medium",
+        "category": "object vs primitive"
     },
     {
         "id": 20,
@@ -237,7 +261,9 @@
             "D": "Neel, true"
         },
         "answer": "C",
-        "explanation": "`JSON.stringify(str)` converts the string into a JSON-safe string by wrapping it in double quotes (i.e., returns `\"Neel\"`). So `\"Neel\" === Neel` returns false because one has quotes and the other doesn't."
+        "explanation": "`JSON.stringify(str)` converts the string into a JSON-safe string by wrapping it in double quotes (i.e., returns `\"Neel\"`). So `\"Neel\" === Neel` returns false because one has quotes and the other doesn't.",
+        "difficulty": "medium",
+        "category": "JSON and type coercion"
     },
     {
         "id": 21,
@@ -249,7 +275,9 @@
             "D": "false, true"
         },
         "answer": "C",
-        "explanation": "Both `a` and `b` refer to the same array object in memory. So both `==` and `===` return true because they compare the same reference."
+        "explanation": "Both `a` and `b` refer to the same array object in memory. So both `==` and `===` return true because they compare the same reference.",
+        "difficulty": "easy",
+        "category": "reference vs value"
     },
     {
         "id": 22,
@@ -261,7 +289,9 @@
             "D": "false, true"
         },
         "answer": "A",
-        "explanation": "Both `a[0]` and `b[0]` are primitive numbers (`20`). Primitive values are compared by value, so both `==` and `===` return true."
+        "explanation": "Both `a[0]` and `b[0]` are primitive numbers (`20`). Primitive values are compared by value, so both `==` and `===` return true.",
+        "difficulty": "easy",
+        "category": "primitive comparison"
     },
     {
         "id": 23,
@@ -273,7 +303,9 @@
             "D": "false, true"
         },
         "answer": "C",
-        "explanation": "`a == b` is true because loose equality converts the object `b` to its primitive value before comparing. `a === b` is false because one is a number and the other is a Number object."
+        "explanation": "`a == b` is true because loose equality converts the object `b` to its primitive value before comparing. `a === b` is false because one is a number and the other is a Number object.",
+        "difficulty": "medium",
+        "category": "type coercion"
     },
     {
         "id": 24,
@@ -285,7 +317,9 @@
             "D": "2 (Invalid)"
         },
         "answer": "B",
-        "explanation": "`a % 2` gives the remainder when `a` is divided by 2. If the remainder is 1, it’s an odd number. If 0, it's even. Since 3 % 2 is 1, the number is odd."
+        "explanation": "`a % 2` gives the remainder when `a` is divided by 2. If the remainder is 1, it’s an odd number. If 0, it's even. Since 3 % 2 is 1, the number is odd.",
+        "difficulty": "easy",
+        "category": "arithmetic"
     },
     {
         "id": 25,
@@ -297,7 +331,9 @@
             "D": "SyntaxError, SyntaxError, SyntaxError"
         },
         "answer": "B",
-        "explanation": "`3 * 3` returns 9 (multiplication). `3 ** 3` returns 27 (exponentiation). `3 *** 3` is not valid syntax and throws a SyntaxError."
+        "explanation": "`3 * 3` returns 9 (multiplication). `3 ** 3` returns 27 (exponentiation). `3 *** 3` is not valid syntax and throws a SyntaxError.",
+        "difficulty": "medium",
+        "category": "operator precedence"
     },
     {
         "id": 26,
@@ -309,7 +345,9 @@
             "D": "Error"
         },
         "answer": "A",
-        "explanation": "JavaScript is case-sensitive, so `a` and `A` are treated as two different variables. `console.log(a)` prints the value of `a`, which is 22."
+        "explanation": "JavaScript is case-sensitive, so `a` and `A` are treated as two different variables. `console.log(a)` prints the value of `a`, which is 22.",
+        "difficulty": "easy",
+        "category": "variables / case sensitivity"
     },
     {
         "id": 27,
@@ -321,7 +359,9 @@
             "D": "Error"
         },
         "answer": "A",
-        "explanation": "`--a` decrements `a` before comparison, making `a = 22`. Since `b` is also 22, `--a === b` evaluates to `true`."
+        "explanation": "`--a` decrements `a` before comparison, making `a = 22`. Since `b` is also 22, `--a === b` evaluates to `true`.",
+        "difficulty": "easy",
+        "category": "operators / comparison"
     },
     {
         "id": 28,
@@ -333,7 +373,9 @@
             "D": "Error"
         },
         "answer": "B",
-        "explanation": "`a === b` returns `true`. Then `true === --c` becomes `true === 1`, which is false because of strict type mismatch (`boolean === number`)."
+        "explanation": "`a === b` returns `true`. Then `true === --c` becomes `true === 1`, which is false because of strict type mismatch (`boolean === number`).",
+        "difficulty": "medium",
+        "category": "comparison / evaluation order"
     },
     {
         "id": 29,
@@ -345,7 +387,9 @@
             "D": "NaN"
         },
         "answer": "C",
-        "explanation": "`a` is not declared anywhere, so trying to access it throws a `ReferenceError`."
+        "explanation": "`a` is not declared anywhere, so trying to access it throws a `ReferenceError`.",
+        "difficulty": "easy",
+        "category": "errors / hoisting"
     },
     {
         "id": 30,
@@ -357,7 +401,9 @@
             "D": "Error"
         },
         "answer": "C",
-        "explanation": "`var` allows redeclaration of variables. So `x` is first declared (undefined) and then assigned 10. `console.log(x)` prints `10`."
+        "explanation": "`var` allows redeclaration of variables. So `x` is first declared (undefined) and then assigned 10. `console.log(x)` prints `10`.",
+        "difficulty": "easy",
+        "category": "variables / var redeclaration"
     },
     {
         "id": 31,
@@ -369,7 +415,9 @@
             "D": "SyntaxError"
         },
         "answer": "D",
-        "explanation": "`let` does not allow redeclaration with `var` in the same scope. This throws a `SyntaxError` due to duplicate declaration of `x`."
+        "explanation": "`let` does not allow redeclaration with `var` in the same scope. This throws a `SyntaxError` due to duplicate declaration of `x`.",
+        "difficulty": "medium",
+        "category": "variable declaration / scope"
     },
     {
         "id": 32,
@@ -381,7 +429,9 @@
             "D": "NaN"
         },
         "answer": "C",
-        "explanation": "`b` is not declared anywhere. Accessing an undeclared variable throws a `ReferenceError`."
+        "explanation": "`b` is not declared anywhere. Accessing an undeclared variable throws a `ReferenceError`.",
+        "difficulty": "easy",
+        "category": "scope / reference error"
     },
     {
         "id": 33,
@@ -393,7 +443,9 @@
             "D": "NaN"
         },
         "answer": "B",
-        "explanation": "When adding a number (`2`) and a string (`\"2\"`), JavaScript performs string concatenation. So `2 + \"2\"` results in the string `'22'`."
+        "explanation": "When adding a number (`2`) and a string (`\"2\"`), JavaScript performs string concatenation. So `2 + \"2\"` results in the string `'22'`.",
+        "difficulty": "easy",
+        "category": "type coercion"
     },
     {
         "id": 34,
@@ -405,7 +457,9 @@
             "D": "2, 2, 3"
         },
         "answer": "B",
-        "explanation": "`num++` returns `1` and then increments `num` to `2`. `++num` increments `num` to `3` and returns it. Final `num` is `3`."
+        "explanation": "`num++` returns `1` and then increments `num` to `2`. `++num` increments `num` to `3` and returns it. Final `num` is `3`.",
+        "difficulty": "medium",
+        "category": "increment operators / evaluation order"
     },
     {
         "id": 35,
@@ -417,7 +471,9 @@
             "D": "20"
         },
         "answer": "B",
-        "explanation": "`eval(\"10+10*2\")` evaluates the string as a JavaScript expression. `10 * 2 = 20` then `10 + 20 = 30`."
+        "explanation": "`eval(\"10+10*2\")` evaluates the string as a JavaScript expression. `10 * 2 = 20` then `10 + 20 = 30`.",
+        "difficulty": "medium",
+        "category": "eval / operator precedence"
     },
     {
         "id": 36,
@@ -429,7 +485,9 @@
             "D": "undefined"
         },
         "answer": "B",
-        "explanation": "Evaluation goes left to right. `2 + 2 = 4`, then `4 + \"2\"` results in `'42'`. The final type is `string`."
+        "explanation": "Evaluation goes left to right. `2 + 2 = 4`, then `4 + \"2\"` results in `'42'`. The final type is `string`.",
+        "difficulty": "easy",
+        "category": "type-coercion"
     },
     {
         "id": 37,
@@ -441,7 +499,9 @@
             "D": "number22"
         },
         "answer": "D",
-        "explanation": "`typeof 2` is `'number'`. Then `'number' + 2` becomes `'number2'`, and `'number2' + \"2\"` becomes `'number22'`."
+        "explanation": "`typeof 2` is `'number'`. Then `'number' + 2` becomes `'number2'`, and `'number2' + \"2\"` becomes `'number22'`.",
+        "difficulty": "medium",
+        "category": "type-coercion"
     },
     {
         "id": 38,
@@ -453,7 +513,9 @@
             "D": "NaN and 21"
         },
         "answer": "A",
-        "explanation": "`num + \"20\"` results in string concatenation, giving `'2020'`. `++num` increments `num` to `21` before logging it."
+        "explanation": "`num + \"20\"` results in string concatenation, giving `'2020'`. `++num` increments `num` to `21` before logging it.",
+        "difficulty": "easy",
+        "category": "type-coercion"
     },
     {
         "id": 39,
@@ -465,7 +527,9 @@
             "D": "108, 0, NaN"
         },
         "answer": "B",
-        "explanation": "`parseInt` parses from the start of the string until it encounters a non-digit. So all three cases return `108`."
+        "explanation": "`parseInt` parses from the start of the string until it encounters a non-digit. So all three cases return `108`.",
+        "difficulty": "medium",
+        "category": "parsing"
     },
     {
         "id": 40,
@@ -477,7 +541,9 @@
             "D": "NaN and NaN"
         },
         "answer": "A",
-        "explanation": "`4 + \"4\"` performs string concatenation resulting in `'44'`. `+\"4\"` converts the string to a number, so `4 + 4 = 8`."
+        "explanation": "`4 + \"4\"` performs string concatenation resulting in `'44'`. `+\"4\"` converts the string to a number, so `4 + 4 = 8`.",
+        "difficulty": "medium",
+        "category": "type-coercion"
     },
     {
         "id": 41,
@@ -489,7 +555,9 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "`toString` refers to the function `Number.prototype.toString`, whose `length` property is 1 (indicating it accepts one argument). Therefore, `1 + 1 = 2`."
+        "explanation": "`toString` refers to the function `Number.prototype.toString`, whose `length` property is 1 (indicating it accepts one argument). Therefore, `1 + 1 = 2`.",
+        "difficulty": "medium",
+        "category": "typeof / function properties"
     },
     {
         "id": 42,
@@ -501,7 +569,9 @@
             "D": "num1 = 3, num2 = undefined, num3 = 0"
         },
         "answer": "A",
-        "explanation": "`Number(3)` gives `3`, `Number()` with no argument gives `0`, and `Number(undefined)` gives `NaN`."
+        "explanation": "`Number(3)` gives `3`, `Number()` with no argument gives `0`, and `Number(undefined)` gives `NaN`.",
+        "difficulty": "easy",
+        "category": "type conversion"
     },
     {
         "id": 43,
@@ -513,7 +583,9 @@
             "D": "false, false, true"
         },
         "answer": "C",
-        "explanation": "`==` performs type coercion. `0 == \"0\"` is `true` because string is coerced to number. `0 == []` is `true` because `[]` is coerced to `\"\"` then to `0`. But `\"0\" == []` is `false` because `[]` becomes `\"\"`, and `\"0\" != \"\"`."
+        "explanation": "`==` performs type coercion. `0 == \"0\"` is `true` because string is coerced to number. `0 == []` is `true` because `[]` is coerced to `\"\"` then to `0`. But `\"0\" == []` is `false` because `[]` becomes `\"\"`, and `\"0\" != \"\"`.",
+        "difficulty": "medium",
+        "category": "coercion / equality"
     },
     {
         "id": 44,
@@ -525,7 +597,9 @@
             "D": "undefined"
         },
         "answer": "A",
-        "explanation": "`10_0_0_00` is a valid ES2021 numeric separator syntax and evaluates to 100000. So both values are strictly equal."
+        "explanation": "`10_0_0_00` is a valid ES2021 numeric separator syntax and evaluates to 100000. So both values are strictly equal.",
+        "difficulty": "medium",
+        "category": "numeric separators / strict equality"
     },
     {
         "id": 45,
@@ -537,7 +611,9 @@
             "D": "\"221\" and 23"
         },
         "answer": "D",
-        "explanation": "`age += 1` performs string concatenation, resulting in `'221'`. `validage++` converts the string `'22'` to number, then increments to `23`."
+        "explanation": "`age += 1` performs string concatenation, resulting in `'221'`. `validage++` converts the string `'22'` to number, then increments to `23`.",
+        "difficulty": "easy",
+        "category": "type coercion / increment"
     },
     {
         "id": 46,
@@ -549,7 +625,9 @@
             "D": "true and true"
         },
         "answer": "A",
-        "explanation": "`--num` decrements first, so num becomes 1 and then 0. `!1` is `false`, `!0` is `true`. So outputs are `false` and `true`."
+        "explanation": "`--num` decrements first, so num becomes 1 and then 0. `!1` is `false`, `!0` is `true`. So outputs are `false` and `true`.",
+        "category": "unary & logical operator",
+        "difficulty": "medium"
     },
     {
         "id": 47,
@@ -561,7 +639,9 @@
             "D": "object"
         },
         "answer": "C",
-        "explanation": "An arrow function that returns `1` is immediately invoked. The return value is `1`, whose type is `number`."
+        "explanation": "An arrow function that returns `1` is immediately invoked. The return value is `1`, whose type is `number`.",
+        "category": "arrow function",
+        "difficulty": "medium"
     },
     {
         "id": 48,
@@ -573,7 +653,9 @@
             "D": "undefined"
         },
         "answer": "B",
-        "explanation": "`chk` is a regular function that returns an arrow function, but `chk` itself is still a function. `typeof chk` returns `'function'`."
+        "explanation": "`chk` is a regular function that returns an arrow function, but `chk` itself is still a function. `typeof chk` returns `'function'`.",
+        "category": "function & typeof",
+        "difficulty": "easy"
     },
     {
         "id": 49,
@@ -585,7 +667,9 @@
             "D": "undefined"
         },
         "answer": "B",
-        "explanation": "`Number(2)` returns `2`, then adding `1` gives `3`. The function logs `3`."
+        "explanation": "`Number(2)` returns `2`, then adding `1` gives `3`. The function logs `3`.",
+        "category": "conversion",
+        "difficulty": "easy"
     },
     {
         "id": 50,
@@ -597,7 +681,9 @@
             "D": "undefined"
         },
         "answer": "B",
-        "explanation": "`n2` defaults to the value of `n1` if not provided. So `n1 = 10`, `n2 = 10`, and the output is `20`."
+        "explanation": "`n2` defaults to the value of `n1` if not provided. So `n1 = 10`, `n2 = 10`, and the output is `20`.",
+        "category": "default parameters",
+        "difficulty": "medium"
     },
     {
         "id": 51,
@@ -609,7 +695,9 @@
             "D": "Error"
         },
         "answer": "B",
-        "explanation": "The comma operator evaluates multiple expressions and returns the result of the last one. So `sum()` is evaluated but its result is discarded. `sq()` returns `16`, which is assigned to `a`."
+        "explanation": "The comma operator evaluates multiple expressions and returns the result of the last one. So `sum()` is evaluated but its result is discarded. `sq()` returns `16`, which is assigned to `a`.",
+        "difficulty": "medium",
+        "category": "comma operator"
     },
     {
         "id": 52,
@@ -621,7 +709,9 @@
             "D": "Error"
         },
         "answer": "B",
-        "explanation": "Strings are immutable in JavaScript. Modifying `name[0]` has no effect."
+        "explanation": "Strings are immutable in JavaScript. Modifying `name[0]` has no effect.",
+        "difficulty": "easy",
+        "category": "string immutability"
     },
     {
         "id": 53,
@@ -633,7 +723,9 @@
             "D": "Error"
         },
         "answer": "C",
-        "explanation": "`var` declares variables in the global scope (attached to `window` in browsers), so `window.age` is 23."
+        "explanation": "`var` declares variables in the global scope (attached to `window` in browsers), so `window.age` is 23.",
+        "difficulty": "medium",
+        "category": "global scope"
     },
     {
         "id": 54,
@@ -645,7 +737,9 @@
             "D": "null"
         },
         "answer": "C",
-        "explanation": "`for` is a reserved keyword in JavaScript and cannot be used as a variable name."
+        "explanation": "`for` is a reserved keyword in JavaScript and cannot be used as a variable name.",
+        "difficulty": "easy",
+        "category": "reserved keywords"
     },
     {
         "id": 55,
@@ -657,7 +751,9 @@
             "D": "'undefined', NaN"
         },
         "answer": "A",
-        "explanation": "`1 + undefined` results in NaN. `typeof C` returns 'undefined', so `1 + 'undefined'` becomes the string '1undefined'."
+        "explanation": "`1 + undefined` results in NaN. `typeof C` returns 'undefined', so `1 + 'undefined'` becomes the string '1undefined'.",
+        "difficulty": "medium",
+        "category": "type coercion"
     },
     {
         "id": 56,
@@ -669,7 +765,9 @@
             "D": "undefined"
         },
         "answer": "B",
-        "explanation": "2 + 2 = 4, then 4 + '2' results in the string '42'. So typeof a is 'string'."
+        "explanation": "2 + 2 = 4, then 4 + '2' results in the string '42'. So typeof a is 'string'.",
+        "category": "type coercion",
+        "difficulty": "easy"
     },
     {
         "id": 57,
@@ -681,7 +779,9 @@
             "D": "number22"
         },
         "answer": "D",
-        "explanation": "`typeof 2` is 'number', so 'number' + 2 = 'number2', then + '2' = 'number22'."
+        "explanation": "`typeof 2` is 'number', so 'number' + 2 = 'number2', then + '2' = 'number22'.",
+        "category": "operator precedence + coercion",
+        "difficulty": "medium"
     },
     {
         "id": 58,
@@ -693,7 +793,9 @@
             "D": "undefined"
         },
         "answer": "B",
-        "explanation": "The expression evaluates to 10 + (10 * 2) = 30. `eval` executes the string as JS code."
+        "explanation": "The expression evaluates to 10 + (10 * 2) = 30. `eval` executes the string as JS code.",
+        "category": "eval + operator precedence",
+        "difficulty": "easy"
     },
     {
         "id": 59,
@@ -705,7 +807,9 @@
             "D": "1 2 3"
         },
         "answer": "B",
-        "explanation": "`num++` logs 1 and then increments to 2. `++num` increments to 3 and logs 3. Final log is 3."
+        "explanation": "`num++` logs 1 and then increments to 2. `++num` increments to 3 and logs 3. Final log is 3.",
+        "category": "increment operators",
+        "difficulty": "medium"
     },
     {
         "id": 60,
@@ -717,7 +821,9 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "When adding a number and a string, JavaScript coerces the number to a string and concatenates."
+        "explanation": "When adding a number and a string, JavaScript coerces the number to a string and concatenates.",
+        "category": "type coercion",
+        "difficulty": "easy"
     },
     {
         "id": 61,
@@ -729,7 +835,9 @@
             "D": "[1, 2, 3, 5]"
         },
         "answer": "A",
-        "explanation": "Assigning a value to an index beyond the current length creates empty slots. So indices 3 and 4 are empty."
+        "explanation": "Assigning a value to an index beyond the current length creates empty slots. So indices 3 and 4 are empty.",
+        "category": "array holes",
+        "difficulty": "medium"
     },
     {
         "id": 62,
@@ -741,7 +849,9 @@
             "D": "Error"
         },
         "answer": "A",
-        "explanation": "Index 5 is out of bounds and not defined, so JavaScript returns undefined."
+        "explanation": "Index 5 is out of bounds and not defined, so JavaScript returns undefined.",
+        "category": "array access",
+        "difficulty": "easy"
     },
     {
         "id": 63,
@@ -753,7 +863,9 @@
             "D": "[\"neel\", false, \"samel\"]"
         },
         "answer": "C",
-        "explanation": "The `delete` operator removes the element but leaves an empty slot."
+        "explanation": "The `delete` operator removes the element but leaves an empty slot.",
+        "category": "array holes + delete",
+        "difficulty": "medium"
     },
     {
         "id": 64,
@@ -765,7 +877,9 @@
             "D": "undefined, [2, 3]"
         },
         "answer": "C",
-        "explanation": "The length remains 3 because delete only empties the slot, it doesn’t reduce the array size."
+        "explanation": "The length remains 3 because delete only empties the slot, it doesn’t reduce the array size.",
+        "category": "delete operator in array",
+        "difficulty": "medium"
     },
     {
         "id": 65,
@@ -777,7 +891,9 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "Each comma creates an empty slot; 3 commas mean array has length 3."
+        "explanation": "Each comma creates an empty slot; 3 commas mean array has length 3.",
+        "category": "array holes",
+        "difficulty": "easy"
     },
     {
         "id": 66,
@@ -789,7 +905,9 @@
             "D": "Syntax Error"
         },
         "answer": "A",
-        "explanation": "`\"...\"` is a string of 3 characters, spreading it creates 3 dots, then spreading again results in 3 elements."
+        "explanation": "\"...\" is a string of 3 characters, spreading it creates 3 dots, then spreading again results in 3 elements.",
+        "category": "spread operator, strings, destructuring",
+        "difficulty": "medium"
     },
     {
         "id": 67,
@@ -801,7 +919,9 @@
             "D": "undefined"
         },
         "answer": "A",
-        "explanation": "push returns a number (new length). `newlist` is a number, so calling `.push()` on it throws an error."
+        "explanation": "push returns a number (new length). `newlist` is a number, so calling `.push()` on it throws an error.",
+        "category": "array methods, type coercion",
+        "difficulty": "medium"
     },
     {
         "id": 68,
@@ -813,7 +933,9 @@
             "D": "[\"A\",\"B\",\"C\"] and [\"X\",\"Y\",\"Z\"]"
         },
         "answer": "C",
-        "explanation": "`reverse()` mutates the original array. `toReversed()` returns a reversed copy (added in ES2023)."
+        "explanation": "`reverse()` mutates the original array. `toReversed()` returns a reversed copy (added in ES2023).",
+        "category": "array methods, immutability, ES2023",
+        "difficulty": "medium"
     },
     {
         "id": 69,
@@ -825,7 +947,9 @@
             "D": "None of the above"
         },
         "answer": "B",
-        "explanation": "`sort()` mutates data1. `toSorted()` creates a sorted clone (added in ES2023)."
+        "explanation": "`sort()` mutates data1. `toSorted()` creates a sorted clone (added in ES2023).",
+        "category": "array methods, immutability, ES2023",
+        "difficulty": "medium"
     },
     {
         "id": 70,
@@ -837,7 +961,9 @@
             "D": "[122, 56, 43, 12]"
         },
         "answer": "B",
-        "explanation": "`sort()` converts numbers to strings and sorts lexicographically. '122' comes before '43'."
+        "explanation": "`sort()` converts numbers to strings and sorts lexicographically. '122' comes before '43'.",
+        "category": "array methods, sort, coercion",
+        "difficulty": "easy"
     },
     {
         "id": 71,
@@ -849,7 +975,9 @@
             "D": "Error"
         },
         "answer": "A",
-        "explanation": "The array is sparse. Index 3 and 4 are left unassigned, so they are empty. At index 5, we assign the array itself, creating a circular reference. The output shows as `[1, 2, 3, empty × 2, Array(6)]`."
+        "explanation": "The array is sparse. Index 3 and 4 are left unassigned, so they are empty. At index 5, we assign the array itself, creating a circular reference. The output shows as `[1, 2, 3, empty × 2, Array(6)]`.",
+        "category": "arrays, sparse arrays, references",
+        "difficulty": "medium"
     },
     {
         "id": 72,
@@ -861,7 +989,9 @@
             "D": "undefined"
         },
         "answer": "A",
-        "explanation": "The spread operator `...a` spreads array elements as individual arguments. Since `console.log` can accept multiple arguments, it prints `1 2 3 4`. The object `b` is unrelated."
+        "explanation": "The spread operator `...a` spreads array elements as individual arguments. Since `console.log` can accept multiple arguments, it prints `1 2 3 4`. The object `b` is unrelated.",
+        "category": "spread operator, arrays",
+        "difficulty": "easy"
     },
     {
         "id": 73,
@@ -873,7 +1003,9 @@
             "D": "[[[]]]"
         },
         "answer": "B",
-        "explanation": "This is a 3-level nested array where the innermost array is empty. JavaScript displays it exactly as `[[[[]]]]`."
+        "explanation": "This is a 3-level nested array where the innermost array is empty. JavaScript displays it exactly as `[[[[]]]]`.",
+        "category": "arrays, nesting",
+        "difficulty": "easy"
     },
     {
         "id": 74,
@@ -885,7 +1017,9 @@
             "D": "false true"
         },
         "answer": "A",
-        "explanation": "`2 in num` is true because index 2 exists. `3 in num` is false because index 3 has not been assigned."
+        "explanation": "`2 in num` is true because index 2 exists. `3 in num` is false because index 3 has not been assigned.",
+        "category": "arrays, in operator, indexing",
+        "difficulty": "easy"
     },
     {
         "id": 75,
@@ -897,7 +1031,9 @@
             "D": "true true"
         },
         "answer": "D",
-        "explanation": "The `.every()` method on an empty array returns true by definition (vacuous truth), regardless of the condition."
+        "explanation": "The `.every()` method on an empty array returns true by definition (vacuous truth), regardless of the condition.",
+        "category": "array methods, every, logic",
+        "difficulty": "medium"
     },
     {
         "id": 76,
@@ -909,7 +1045,9 @@
             "D": "Set(4) {1, 2, 3, 4, undefined}"
         },
         "answer": "A",
-        "explanation": "A `Set` automatically removes duplicate values. Hence only unique values {1, 2, 3, 4} are stored."
+        "explanation": "A `Set` automatically removes duplicate values. Hence only unique values {1, 2, 3, 4} are stored.",
+        "difficulty": "easy",
+        "category": "set"
     },
     {
         "id": 77,
@@ -921,7 +1059,9 @@
             "D": "false true"
         },
         "answer": "B",
-        "explanation": "`set.has(1)` is true because 1 is in the set. `set.has(\"1\")` is false because string \"1\" is not the same as number 1 (Set uses strict equality)."
+        "explanation": "`set.has(1)` is true because 1 is in the set. `set.has(\"1\")` is false because string \"1\" is not the same as number 1 (Set uses strict equality).",
+        "difficulty": "medium",
+        "category": "set"
     },
     {
         "id": 78,
@@ -933,7 +1073,9 @@
             "D": "[\"neel\", \"ashok\"]"
         },
         "answer": "B",
-        "explanation": "`slice()` returns a shallow copy and does not modify the original array. So `cnt` remains unchanged."
+        "explanation": "`slice()` returns a shallow copy and does not modify the original array. So `cnt` remains unchanged.",
+        "difficulty": "easy",
+        "category": "array-methods"
     },
     {
         "id": 79,
@@ -945,7 +1087,9 @@
             "D": "[122, 56, 43, 12]"
         },
         "answer": "C",
-        "explanation": "`sort()` converts elements to strings and sorts them lexicographically. '122' comes before '43'."
+        "explanation": "`sort()` converts elements to strings and sorts them lexicographically. '122' comes before '43'.",
+        "difficulty": "medium",
+        "category": "array-methods"
     },
     {
         "id": 80,
@@ -957,7 +1101,79 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "The array has 3 empty slots (sparse array). Empty slots still count toward the `length` property."
+        "explanation": "The array has 3 empty slots (sparse array). Empty slots still count toward the `length` property.",
+        "difficulty": "medium",
+        "category": "arrays"
+    },
+    {
+        "id": 76,
+        "question": "What will be the output?\n\nconst a = new Set([1, 2, 3, 4, 1, 2, 3, 4]);\nconsole.log(a);",
+        "options": {
+            "A": "Set(4) {1, 2, 3, 4}",
+            "B": "Set(8) {1, 2, 3, 4, 1, 2, 3, 4}",
+            "C": "[1, 2, 3, 4]",
+            "D": "Set(4) {1, 2, 3, 4, undefined}"
+        },
+        "answer": "A",
+        "explanation": "A `Set` automatically removes duplicate values. Hence only unique values {1, 2, 3, 4} are stored.",
+        "difficulty": "easy",
+        "category": "Set"
+    },
+    {
+        "id": 77,
+        "question": "What does the following code print?\n\nconst set = new Set([1, 2, 3, 4, 5]);\nconsole.log(set.has(1));\nconsole.log(set.has(\"1\"));",
+        "options": {
+            "A": "true true",
+            "B": "true false",
+            "C": "false false",
+            "D": "false true"
+        },
+        "answer": "B",
+        "explanation": "`set.has(1)` is true because 1 is in the set. `set.has(\"1\")` is false because string \"1\" is not the same as number 1 (Set uses strict equality).",
+        "difficulty": "medium",
+        "category": "Set"
+    },
+    {
+        "id": 78,
+        "question": "What will be the output?\n\nconst cnt = [\"neel\", \"ashok\", \"samel\"];\ncnt.slice(0, 1);\nconsole.log(cnt);",
+        "options": {
+            "A": "[\"neel\"]",
+            "B": "[\"neel\", \"ashok\", \"samel\"]",
+            "C": "[\"ashok\", \"samel\"]",
+            "D": "[\"neel\", \"ashok\"]"
+        },
+        "answer": "B",
+        "explanation": "`slice()` returns a shallow copy and does not modify the original array. So `cnt` remains unchanged.",
+        "difficulty": "easy",
+        "category": "Array"
+    },
+    {
+        "id": 79,
+        "question": "What will be the result?\n\nconst score = [12, 43, 56, 122];\nscore.sort();\nconsole.log(score);",
+        "options": {
+            "A": "[12, 43, 56, 122]",
+            "B": "[122, 12, 43, 56]",
+            "C": "[12, 122, 43, 56]",
+            "D": "[122, 56, 43, 12]"
+        },
+        "answer": "C",
+        "explanation": "`sort()` converts elements to strings and sorts them lexicographically. '122' comes before '43'.",
+        "difficulty": "medium",
+        "category": "Array"
+    },
+    {
+        "id": 80,
+        "question": "What is the result?\n\nconst arr = [,,,];\nconsole.log(arr.length);",
+        "options": {
+            "A": "0",
+            "B": "2",
+            "C": "3",
+            "D": "undefined"
+        },
+        "answer": "C",
+        "explanation": "The array has 3 empty slots (sparse array). Empty slots still count toward the `length` property.",
+        "difficulty": "medium",
+        "category": "Array"
     },
     {
         "id": 81,
@@ -969,7 +1185,9 @@
             "D": "null, [{ name: 'Neel samel' }]"
         },
         "answer": "B",
-        "explanation": "Even though `user` is set to null, the `userList` array still holds a reference to the original object. Hence, the first log prints the object, and the second prints `null`."
+        "explanation": "Even though `user` is set to null, the `userList` array still holds a reference to the original object. Hence, the first log prints the object, and the second prints `null`.",
+        "difficulty": "medium",
+        "category": "Reference vs Value"
     },
     {
         "id": 82,
@@ -981,7 +1199,9 @@
             "D": "TypeError during spread operation"
         },
         "answer": "C",
-        "explanation": "Rest parameters must be the last formal parameter. Having `moreitem` after `...args` causes a SyntaxError."
+        "explanation": "Rest parameters must be the last formal parameter. Having `moreitem` after `...args` causes a SyntaxError.",
+        "difficulty": "hard",
+        "category": "Rest/Spread"
     },
     {
         "id": 83,
@@ -993,7 +1213,9 @@
             "D": "{ x: [1, 2], y: [3, 4, 5] }"
         },
         "answer": "A",
-        "explanation": "`x` gets the first value (1), and the rest (`[2, 3, 4, 5]`) goes into `y` using the rest operator."
+        "explanation": "`x` gets the first value (1), and the rest (`[2, 3, 4, 5]`) goes into `y` using the rest operator.",
+        "difficulty": "easy",
+        "category": "Destructuring"
     },
     {
         "id": 84,
@@ -1005,7 +1227,9 @@
             "D": "2, 1"
         },
         "answer": "A",
-        "explanation": "When no initial value is passed, `reduce` uses the first item as `acc` and second as `next`. So `1` and `2` are logged."
+        "explanation": "When no initial value is passed, `reduce` uses the first item as `acc` and second as `next`. So `1` and `2` are logged.",
+        "difficulty": "medium",
+        "category": "Array.reduce"
     },
     {
         "id": 85,
@@ -1017,7 +1241,23 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "`[1, 2]` is an expression. The comma operator returns the last value, so this becomes `[1,2,3,4,5][2]` which is `3`."
+        "explanation": "`[1, 2]` is an expression. The comma operator returns the last value, so this becomes `[1,2,3,4,5][2]` which is `3`.",
+        "difficulty": "hard",
+        "category": "Comma Operator"
+    },
+    {
+        "id": 85,
+        "question": "What will be the output?\n\n```js\nlet r = [1, 2, 3, 4, 5][1, 2];\nconsole.log(r);\n```",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "undefined"
+        },
+        "answer": "C",
+        "explanation": "`[1, 2]` is an expression. The comma operator returns the last value, so this becomes `[1,2,3,4,5][2]` which is `3`.",
+        "difficulty": "medium",
+        "category": "comma operator"
     },
     {
         "id": 86,
@@ -1029,7 +1269,9 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "`num += 1` increases `num` to 2, so `list[2]` is \"c\""
+        "explanation": "`num += 1` increases `num` to 2, so `list[2]` is \"c\"",
+        "difficulty": "easy",
+        "category": "operators and arrays"
     },
     {
         "id": 87,
@@ -1041,7 +1283,9 @@
             "D": "Throws error"
         },
         "answer": "B",
-        "explanation": "When a constructor function returns an explicit object, that object is returned instead of 'this'. So, the output is { hero: 'Lord' }."
+        "explanation": "When a constructor function returns an explicit object, that object is returned instead of 'this'. So, the output is { hero: 'Lord' }.",
+        "difficulty": "medium",
+        "category": "constructor function"
     },
     {
         "id": 88,
@@ -1053,7 +1297,9 @@
             "D": "false, {}"
         },
         "answer": "C",
-        "explanation": "The `delete` operator removes the `name` property and returns `true`. The object becomes empty after deletion."
+        "explanation": "The `delete` operator removes the `name` property and returns `true`. The object becomes empty after deletion.",
+        "difficulty": "easy",
+        "category": "delete operator"
     },
     {
         "id": 89,
@@ -1065,7 +1311,9 @@
             "D": "Throws error"
         },
         "answer": "B",
-        "explanation": "You cannot delete a variable declared with `const` or `let`. The `delete` operator returns `false` and the variable remains unchanged."
+        "explanation": "You cannot delete a variable declared with `const` or `let`. The `delete` operator returns `false` and the variable remains unchanged.",
+        "difficulty": "medium",
+        "category": "delete operator"
     },
     {
         "id": 90,
@@ -1077,7 +1325,9 @@
             "D": "Throws error"
         },
         "answer": "B",
-        "explanation": "The `data` variable becomes a new object with a `data` key (holding the original `data` object) and a `city` key from the `info` object."
+        "explanation": "The `data` variable becomes a new object with a `data` key (holding the original `data` object) and a `city` key from the `info` object.",
+        "difficulty": "medium",
+        "category": "spread operator"
     },
     {
         "id": 91,
@@ -1089,7 +1339,9 @@
             "D": "{ fname: 'neel', age: 25, lname: 'samel' }"
         },
         "answer": "B",
-        "explanation": "When spreading objects, keys in later objects overwrite earlier ones. Here, `age: 25` from `info` overwrites `age: 23` from `data`."
+        "explanation": "When spreading objects, keys in later objects overwrite earlier ones. Here, `age: 25` from `info` overwrites `age: 23` from `data`.",
+        "difficulty": "easy",
+        "category": "spread"
     },
     {
         "id": 92,
@@ -1101,7 +1353,9 @@
             "D": "Throws error"
         },
         "answer": "B",
-        "explanation": "After `Object.seal`, you cannot add new properties, but you can modify existing ones. So, `name` changes to 'neelu', but `age` is not added."
+        "explanation": "After `Object.seal`, you cannot add new properties, but you can modify existing ones. So, `name` changes to 'neelu', but `age` is not added.",
+        "difficulty": "medium",
+        "category": "objects"
     },
     {
         "id": 93,
@@ -1113,7 +1367,9 @@
             "D": "{ x: 30, y: 20 }"
         },
         "answer": "A",
-        "explanation": "`Object.freeze` prevents any modification or addition to the object. Changes to `box` or `Shape` do not affect the original object."
+        "explanation": "`Object.freeze` prevents any modification or addition to the object. Changes to `box` or `Shape` do not affect the original object.",
+        "difficulty": "medium",
+        "category": "objects"
     },
     {
         "id": 94,
@@ -1125,7 +1381,9 @@
             "D": "undefined, undefined, undefined, undefined"
         },
         "answer": "A",
-        "explanation": "Accessing properties by dot notation or bracket notation with the exact key works. `person.data` looks for a property literally named 'data', which doesn't exist."
+        "explanation": "Accessing properties by dot notation or bracket notation with the exact key works. `person.data` looks for a property literally named 'data', which doesn't exist.",
+        "difficulty": "easy",
+        "category": "objects"
     },
     {
         "id": 95,
@@ -1137,7 +1395,9 @@
             "D": "\"undefined\""
         },
         "answer": "B",
-        "explanation": "The rest parameter collects arguments into an array, and `typeof` an array returns 'object' in JavaScript."
+        "explanation": "The rest parameter collects arguments into an array, and `typeof` an array returns 'object' in JavaScript.",
+        "difficulty": "easy",
+        "category": "rest-parameters"
     },
     {
         "id": 96,
@@ -1149,7 +1409,9 @@
             "D": "Logs nothing"
         },
         "answer": "C",
-        "explanation": "Objects are not iterable with `for...of` loops. This code throws a TypeError."
+        "explanation": "Objects are not iterable with `for...of` loops. This code throws a TypeError.",
+        "category": "for...of & iterables",
+        "difficulty": "medium"
     },
     {
         "id": 97,
@@ -1161,7 +1423,9 @@
             "D": "false, false"
         },
         "answer": "C",
-        "explanation": "Object keys are strings in JavaScript, so \"1\" and 1 are equivalent keys. Hence, both calls return true."
+        "explanation": "Object keys are strings in JavaScript, so \"1\" and 1 are equivalent keys. Hence, both calls return true.",
+        "category": "object keys & coercion",
+        "difficulty": "medium"
     },
     {
         "id": 98,
@@ -1173,7 +1437,9 @@
             "D": "Throws error"
         },
         "answer": "B",
-        "explanation": "When a constructor returns an object explicitly, that object is returned instead of `this`. So `mycar.make` is 'bmw'."
+        "explanation": "When a constructor returns an object explicitly, that object is returned instead of `this`. So `mycar.make` is 'bmw'.",
+        "category": "constructors & return behavior",
+        "difficulty": "medium"
     },
     {
         "id": 99,
@@ -1185,7 +1451,9 @@
             "D": "Throws error"
         },
         "answer": "B",
-        "explanation": "Objects are assigned by reference, so `d` points to the same object as `c`. Changing `c.greeting` affects `d.greeting`."
+        "explanation": "Objects are assigned by reference, so `d` points to the same object as `c`. Changing `c.greeting` affects `d.greeting`.",
+        "category": "object references",
+        "difficulty": "easy"
     },
     {
         "id": 100,
@@ -1197,7 +1465,9 @@
             "D": "NaN, NaN"
         },
         "answer": "B",
-        "explanation": "`monthly` is a regular function where `this` refers to `income`, so it returns 24. Arrow function `yearly` inherits `this` from surrounding scope (likely `window`), where `skills` is undefined, resulting in NaN."
+        "explanation": "`monthly` is a regular function where `this` refers to `income`, so it returns 24. Arrow function `yearly` inherits `this` from surrounding scope (likely `window`), where `skills` is undefined, resulting in NaN.",
+        "category": "this binding (arrow vs normal)",
+        "difficulty": "hard"
     },
     {
         "id": 101,
@@ -1209,7 +1479,9 @@
             "D": "[object Object]"
         },
         "answer": "B",
-        "explanation": "Object keys are converted to strings. Both `B` and `C` convert to '[object Object]', so `A[C] = 456` overwrites the previous value. Hence `A[B]` is 456."
+        "explanation": "Object keys are converted to strings. Both `B` and `C` convert to '[object Object]', so `A[C] = 456` overwrites the previous value. Hence `A[B]` is 456.",
+        "category": "object reference",
+        "difficulty": "medium"
     },
     {
         "id": 102,
@@ -1221,7 +1493,9 @@
             "D": "null"
         },
         "answer": "B",
-        "explanation": "The `delete` operator only works on object properties, not on local variables or function parameters. So `a` remains 5."
+        "explanation": "The `delete` operator only works on object properties, not on local variables or function parameters. So `a` remains 5.",
+        "category": "operators",
+        "difficulty": "medium"
     },
     {
         "id": 103,
@@ -1233,19 +1507,23 @@
             "D": "null"
         },
         "answer": "A",
-        "explanation": "Arrow functions inherit `this` from their lexical scope. Here, `nestedarrow` uses `this` from `fullname` method, which refers to `user`."
+        "explanation": "Arrow functions inherit `this` from their lexical scope. Here, `nestedarrow` uses `this` from `fullname` method, which refers to `user`.",
+        "category": "this",
+        "difficulty": "easy"
     },
     {
         "id": 104,
         "question": "What will be the output?\n\n```js\nconst key = \"constructor\";\nconst obj = {};\n\nif (obj[key]) {\n  console.log(\"Key Exist\");\n} else {\n  console.log(\"Key not found\");\n}\n\nif (key in obj) {\n  console.log(\"Key Exist\");\n} else {\n  console.log(\"Key not found\");\n}\n```",
         "options": {
-            "A": "Key not found\nKey not found",
-            "B": "Key Exist\nKey Exist",
-            "C": "Key not found\nKey Exist",
-            "D": "Key Exist\nKey not found"
+            "A": "Key not found\\nKey not found",
+            "B": "Key Exist\\nKey Exist",
+            "C": "Key not found\\nKey Exist",
+            "D": "Key Exist\\nKey not found"
         },
         "answer": "C",
-        "explanation": "`obj[key]` checks for own properties (undefined here), but `key in obj` checks prototype chain. The prototype has 'constructor', so second logs 'Key Exist'."
+        "explanation": "`obj[key]` checks for own properties (undefined here), but `key in obj` checks prototype chain. The prototype has 'constructor', so second logs 'Key Exist'.",
+        "category": "prototype",
+        "difficulty": "medium"
     },
     {
         "id": 105,
@@ -1257,10 +1535,14 @@
             "D": "{}"
         },
         "answer": "B",
-        "explanation": "Object keys are stringified; both `dog` and `cat` become '[object Object]'. The second assignment overwrites the first, so accessing with `dog` key returns the cat's value."
+        "explanation": "Object keys are stringified; both `dog` and `cat` become '[object Object]'. The second assignment overwrites the first, so accessing with `dog` key returns the cat's value.",
+        "category": "object reference",
+        "difficulty": "medium"
     },
     {
         "id": 106,
+        "category": "Objects",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nconst { fname: Name } = { fname: \"Neel\" };\nconsole.log(Name);\n```",
         "options": {
             "A": "\"fname\"",
@@ -1273,6 +1555,8 @@
     },
     {
         "id": 107,
+        "category": "Objects",
+        "difficulty": "Medium",
         "question": "What will be the output?\n\n```js\nconst student = {\n  10: \"Purnima\"\n};\nstudent.20 = \"krushnai\";\nconsole.log(student);\n```",
         "options": {
             "A": "{ '10': 'Purnima', 20: 'krushnai' }",
@@ -1285,6 +1569,8 @@
     },
     {
         "id": 108,
+        "category": "Objects",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nlet isPass = false;\nconsole.log(isPass.randomKey);\nconsole.log(isPass.constructor);\n```",
         "options": {
             "A": "undefined, [Function: Boolean]",
@@ -1297,6 +1583,8 @@
     },
     {
         "id": 109,
+        "category": "Objects",
+        "difficulty": "Medium",
         "question": "What will be the output?\n\n```js\nconst obj = { name: \"X\" };\ndelete obj.name;\nobj.name = \"Y\";\nconsole.log(obj);\n```",
         "options": {
             "A": "{}",
@@ -1309,6 +1597,8 @@
     },
     {
         "id": 110,
+        "category": "Objects",
+        "difficulty": "Medium",
         "question": "What will be the output?\n\n```js\nconsole.log(`${{Object}}`);\n\nconst obj = {};\nobj.Object = () => {};\nconsole.log(obj.toString());\n```",
         "options": {
             "A": "`[object Object]` and `[object Object]`",
@@ -1329,7 +1619,9 @@
             "D": "{ admin: true, user: { name: 'neel', age: 25 } }"
         },
         "answer": "C",
-        "explanation": "The spread operator `...user` copies all properties of `user` into `admin`, resulting in an object with all three properties."
+        "explanation": "The spread operator `...user` copies all properties of `user` into `admin`, resulting in an object with all three properties.",
+        "difficulty": "easy",
+        "category": "spread"
     },
     {
         "id": 112,
@@ -1341,7 +1633,9 @@
             "D": "Logs an empty object"
         },
         "answer": "B",
-        "explanation": "Class declarations are not hoisted like function declarations, so accessing `person` before its definition causes a ReferenceError."
+        "explanation": "Class declarations are not hoisted like function declarations, so accessing `person` before its definition causes a ReferenceError.",
+        "difficulty": "medium",
+        "category": "class"
     },
     {
         "id": 113,
@@ -1353,7 +1647,9 @@
             "D": "Logs [1,2,3]"
         },
         "answer": "C",
-        "explanation": "The function expects a single object parameter to destructure. Passing 3 separate arguments causes a TypeError."
+        "explanation": "The function expects a single object parameter to destructure. Passing 3 separate arguments causes a TypeError.",
+        "difficulty": "medium",
+        "category": "destructuring"
     },
     {
         "id": 114,
@@ -1365,7 +1661,9 @@
             "D": "2 and 2"
         },
         "answer": "B",
-        "explanation": "The `length` property counts parameters before the first one with a default value. `init` has 3 parameters, `end` has 2 before default."
+        "explanation": "The `length` property counts parameters before the first one with a default value. `init` has 3 parameters, `end` has 2 before default.",
+        "difficulty": "hard",
+        "category": "function-properties"
     },
     {
         "id": 115,
@@ -1377,7 +1675,9 @@
             "D": "Throws error"
         },
         "answer": "A",
-        "explanation": "`daimeter` is a regular function so `this` refers to `shape`, returning 20. `perimeter` is an arrow function, so `this` refers to the global scope where `radius` is undefined, returning NaN."
+        "explanation": "`daimeter` (typo for diameter) is a regular method and works correctly. However, `perimeter` is an arrow function and doesn't bind `this` to `shape`, so `this.radius` is `undefined` in it.",
+        "difficulty": "hard",
+        "category": "arrow-function-this"
     },
     {
         "id": 116,
@@ -1389,7 +1689,9 @@
             "D": "{}"
         },
         "answer": "B",
-        "explanation": "The expression `obj[\"a\"] = \"B\"` assigns 'B' to key 'a' and returns 'B', so the statement becomes `obj['B'] = 'C'`. The final object is `{ B: 'C' }`."
+        "explanation": "The expression `obj[\"a\"] = \"B\"` assigns 'B' to key 'a' and returns 'B', so the statement becomes `obj['B'] = 'C'`. The final object is `{ B: 'C' }`.",
+        "category": "Objects",
+        "difficulty": "Hard"
     },
     {
         "id": 117,
@@ -1401,7 +1703,9 @@
             "D": "null"
         },
         "answer": "B",
-        "explanation": "`y` is assigned to a new object and then `x` is assigned the same object reference. So changing `y.name` affects `x.name`."
+        "explanation": "`y` is assigned to a new object and then `x` is assigned the same object reference. So changing `y.name` affects `x.name`.",
+        "category": "Objects",
+        "difficulty": "Medium"
     },
     {
         "id": 118,
@@ -1413,7 +1717,9 @@
             "D": "{ a: null, b: undefined, c: false, d: 0, e: \"d\" }"
         },
         "answer": "A",
-        "explanation": "Default values are used only if the value is `undefined`. Here, `a` is null (not undefined), so default not applied; `b` is undefined, so default applied; `c` and `d` are falsy but not undefined, so default not applied; `e` is missing, so default applied."
+        "explanation": "Default values are used only if the value is `undefined`. Here, `a` is null (not undefined), so default not applied; `b` is undefined, so default applied; `c` and `d` are falsy but not undefined, so default not applied; `e` is missing, so default applied.",
+        "category": "Destructuring",
+        "difficulty": "Medium"
     },
     {
         "id": 119,
@@ -1425,7 +1731,9 @@
             "D": "Throws error"
         },
         "answer": "A",
-        "explanation": "Inside the function, `person` is reassigned to a new object, so `person1` outside remains unchanged, while `person2` gets the new object."
+        "explanation": "Inside the function, `person` is reassigned to a new object, so `person1` outside remains unchanged, while `person2` gets the new object.",
+        "category": "Reference vs Value",
+        "difficulty": "Medium"
     },
     {
         "id": 120,
@@ -1437,7 +1745,9 @@
             "D": "10, {}, 10, {}, 20"
         },
         "answer": "B",
-        "explanation": "`x.h1` initially reads 10 from prototype. Increment sets `Object.prototype.h1` to 11. Then sum adds 11 + 1 (own keys count)."
+        "explanation": "`x.h1` initially reads 10 from prototype. Increment sets `Object.prototype.h1` to 11. Then sum adds 11 + 1 (own keys count).",
+        "category": "Prototype",
+        "difficulty": "Hard"
     },
     {
         "id": 121,
@@ -1449,7 +1759,9 @@
             "D": "Throws error, undefined"
         },
         "answer": "B",
-        "explanation": "WeakMap holds keys weakly. When `Person` is set to null, the object is eligible for garbage collection, so `dataMap.get(null)` returns undefined."
+        "explanation": "WeakMap holds keys weakly. When `Person` is set to null, the object is eligible for garbage collection, so `dataMap.get(null)` returns undefined.",
+        "category": "Objects",
+        "difficulty": "Medium"
     },
     {
         "id": 122,
@@ -1461,7 +1773,9 @@
             "D": "undefined, []"
         },
         "answer": "A",
-        "explanation": "The property \"a\" is defined with `enumerable: true`, so it appears in `Object.keys` and logs its value correctly."
+        "explanation": "The property \"a\" is defined with `enumerable: true`, so it appears in `Object.keys` and logs its value correctly.",
+        "category": "Objects",
+        "difficulty": "Easy"
     },
     {
         "id": 123,
@@ -1473,19 +1787,23 @@
             "D": "undefined"
         },
         "answer": "C",
-        "explanation": "`obj` created with `Object.create(null)` has no prototype, so `hasOwnProperty` is undefined, causing a TypeError."
+        "explanation": "`obj` created with `Object.create(null)` has no prototype, so `hasOwnProperty` is undefined, causing a TypeError.",
+        "category": "Objects",
+        "difficulty": "Medium"
     },
     {
         "id": 124,
         "question": "What will be logged?\n\n```js\nconst a = { fn: function () {} };\nconst b = [function () {}];\n\nconst strA = JSON.stringify(a);\nconst strB = JSON.stringify(b);\n\nconsole.log(strA);\nconsole.log(strB);\n```",
         "options": {
             "A": "\"{}\", \"[null]\"",
-            "B": "\"{\"fn\":null}\", \"[null]\"",
+            "B": "\"{\\\"fn\\\":null}\", \"[null]\"",
             "C": "\"{}\", \"[]\"",
-            "D": "\"{\"fn\":{}}\", \"[{}]\""
+            "D": "\"{\\\"fn\\\":{}}\", \"[{}]\""
         },
         "answer": "A",
-        "explanation": "Functions are omitted in object serialization, resulting in '{}', but in arrays, they convert to `null`, so '[null]'."
+        "explanation": "Functions are omitted in object serialization, resulting in '{}', but in arrays, they convert to `null`, so '[null]'.",
+        "category": "JSON",
+        "difficulty": "Medium"
     },
     {
         "id": 125,
@@ -1497,22 +1815,14 @@
             "D": "undefined"
         },
         "answer": "A",
-        "explanation": "The `freeze` function does not actually call `Object.freeze()`, so nested objects remain mutable, allowing `lastname` to be changed."
+        "explanation": "The `freeze` function does not actually call `Object.freeze()`, so nested objects remain mutable, allowing `lastname` to be changed.",
+        "category": "Objects",
+        "difficulty": "Medium"
     },
     {
         "id": 126,
-        "question": "What will be logged?\n\n```js\nlet name = \"neel\";\nfunction chK() {\n    console.log(name);\n}\nchK();\n```",
-        "options": {
-            "A": "undefined",
-            "B": "ReferenceError",
-            "C": "\"neel\"",
-            "D": "null"
-        },
-        "answer": "C",
-        "explanation": "The variable `name` is declared in the outer scope, so the function `chK` can access it and logs \"neel\"."
-    },
-    {
-        "id": 127,
+        "category": "function basics",
+        "difficulty": "Easy",
         "question": "What will be the output?\n\n```js\nfunction sum(x, y, z) {\n    return x + y + z;\n}\nconsole.log(sum(1, 2, 3));\n```",
         "options": {
             "A": "6",
@@ -1524,7 +1834,9 @@
         "explanation": "The function adds three numbers correctly, so the output is 6."
     },
     {
-        "id": 128,
+        "id": 127,
+        "category": "function properties",
+        "difficulty": "Easy",
         "question": "What will be logged?\n\n```js\nfunction fruits() {\n    console.log(\"neel\");\n}\nfruits.name = \"orange\";\nfruits();\n```",
         "options": {
             "A": "\"orange\"",
@@ -1536,7 +1848,9 @@
         "explanation": "Function’s `name` property is not used inside the function body; the call logs \"neel\"."
     },
     {
-        "id": 129,
+        "id": 128,
+        "category": "error handling",
+        "difficulty": "Medium",
         "question": "What will be the output?\n\n```js\n(() => {\n  let x, y;\n  try {\n    throw new Error();\n  } catch (x) {\n    (x = 1), (y = 2);\n    console.log(x);\n  }\n  console.log(x);\n  console.log(y);\n})();\n```",
         "options": {
             "A": "1, undefined, 2",
@@ -1548,7 +1862,9 @@
         "explanation": "Catch block parameter `x` shadows outer `x`. Inside catch logs 1, outer `x` remains undefined, `y` is assigned 2 and logged."
     },
     {
-        "id": 130,
+        "id": 129,
+        "category": "try-catch",
+        "difficulty": "Medium",
         "question": "What will be the output?\n\n```js\nfunction getmessage() {\n  throw \"Hello world\";\n}\nfunction sayhello() {\n  try {\n    const data = getmessage();\n    console.log(`Welcome to ${data}`);\n  } catch (error) {\n    console.log(`Error ${error}`);\n  }\n}\nsayhello();\n```",
         "options": {
             "A": "Welcome to Hello world",
@@ -1561,6 +1877,8 @@
     },
     {
         "id": 131,
+        "category": "scope",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\n(() => {\n  let x = (y = 10);\n})();\n\nconsole.log(typeof x);\nconsole.log(typeof y);\n```",
         "options": {
             "A": "\"number\", \"number\"",
@@ -1573,6 +1891,8 @@
     },
     {
         "id": 132,
+        "category": "return statement",
+        "difficulty": "Easy",
         "question": "What will this code output?\n\n```js\nfunction chk(a, b) {\n  if (a > b) console.log(\"A is greater\");\n  else console.log(\"B is greater\");\n  return;\n  a + b;\n}\n\nconsole.log(chk(2, 3));\n```",
         "options": {
             "A": "\"A is greater\", undefined",
@@ -1585,6 +1905,8 @@
     },
     {
         "id": 133,
+        "category": "function expression",
+        "difficulty": "Medium",
         "question": "What will happen?\n\n```js\nif (function fn() {}) {\n  console.log(fn);\n}\n```",
         "options": {
             "A": "Logs the function fn",
@@ -1597,6 +1919,64 @@
     },
     {
         "id": 134,
+        "category": "hoisting",
+        "difficulty": "Medium",
+        "question": "What will be logged?\n\n```js\nvar magic = 900;\nfunction magic() {\n  console.log(\"Neel\");\n}\n\nconsole.log(magic);\n```",
+        "options": {
+            "A": "\"Neel\"",
+            "B": "900",
+            "C": "function magic() { console.log(\"Neel\"); }",
+            "D": "undefined"
+        },
+        "answer": "B",
+        "explanation": "Variable declaration `var magic = 900` overrides the function declaration `magic`. So `magic` is 900."
+    },
+    {
+        "id": 131,
+        "category": "scope",
+        "difficulty": "Medium",
+        "question": "What will be logged?\n\n```js\n(() => {\n  let x = (y = 10);\n})();\n\nconsole.log(typeof x);\nconsole.log(typeof y);\n```",
+        "options": {
+            "A": "\"number\", \"number\"",
+            "B": "\"undefined\", \"number\"",
+            "C": "\"undefined\", \"undefined\"",
+            "D": "\"number\", \"undefined\""
+        },
+        "answer": "B",
+        "explanation": "Inside the IIFE, `x` is block scoped and not accessible outside, so `typeof x` is \"undefined\". `y` is assigned without var/let/const, making it global, so `typeof y` is \"number\"."
+    },
+    {
+        "id": 132,
+        "category": "functions",
+        "difficulty": "Easy",
+        "question": "What will this code output?\n\n```js\nfunction chk(a, b) {\n  if (a > b) console.log(\"A is greater\");\n  else console.log(\"B is greater\");\n  return;\n  a + b;\n}\n\nconsole.log(chk(2, 3));\n```",
+        "options": {
+            "A": "\"A is greater\", undefined",
+            "B": "\"B is greater\", undefined",
+            "C": "\"B is greater\", NaN",
+            "D": "Error"
+        },
+        "answer": "B",
+        "explanation": "Since 2 < 3, it logs \"B is greater\". The function returns undefined because the line after `return` is unreachable."
+    },
+    {
+        "id": 133,
+        "category": "functions",
+        "difficulty": "Medium",
+        "question": "What will happen?\n\n```js\nif (function fn() {}) {\n  console.log(fn);\n}\n```",
+        "options": {
+            "A": "Logs the function fn",
+            "B": "ReferenceError: fn is not defined",
+            "C": "Does nothing",
+            "D": "SyntaxError"
+        },
+        "answer": "B",
+        "explanation": "Function expressions inside conditions are not hoisted with a name; `fn` is not defined in that scope, causing ReferenceError."
+    },
+    {
+        "id": 134,
+        "category": "hoisting",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nvar magic = 900;\nfunction magic() {\n  console.log(\"Neel\");\n}\n\nconsole.log(magic);\n```",
         "options": {
             "A": "\"Neel\"",
@@ -1609,6 +1989,8 @@
     },
     {
         "id": 135,
+        "category": "Hoisting",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nagaintest();\ntest();\nconst test = function () {\n  console.log(\"Hii Devin\");\n};\n\nfunction againtest() {\n  console.log(\"Hii neel\");\n}\n```",
         "options": {
             "A": "\"Hii neel\" then \"Hii Devin\"",
@@ -1621,6 +2003,8 @@
     },
     {
         "id": 136,
+        "category": "IIFE",
+        "difficulty": "Medium",
         "question": "How can you convert this function declaration into a function expression and invoke it immediately?\n\n```js\n// Original function declaration (will cause syntax error if invoked immediately)\nfunction() {\n    console.log(\"Hii neel\");\n}()\n\n// Converted to function expression\n!function() {\n    console.log(\"Hii neel\");\n}()\n```",
         "options": {
             "A": "Use ! before function to convert it to an expression",
@@ -1633,6 +2017,8 @@
     },
     {
         "id": 137,
+        "category": "setInterval",
+        "difficulty": "Easy",
         "question": "How do you stop a setInterval function?\n\n```js\nlet num = 0;\nfunction show() {\n  setInterval(function () {\n    console.log(\"Number\");\n    console.log(num++);\n\n    if (num > 5) {\n      clearInterval(id);\n    }\n  }, 1000);\n}\nshow();\n```",
         "options": {
             "A": "Using clearInterval with interval id",
@@ -1645,6 +2031,8 @@
     },
     {
         "id": 138,
+        "category": "window object",
+        "difficulty": "Easy",
         "question": "How to call a function using the Window object?\n\n```js\nfunction show() {\n  console.log(\"Neel\");\n}\n\nconst FunName = \"show\";\nwindow[FunName]();\n```",
         "options": {
             "A": "Call function directly by name",
@@ -1657,6 +2045,8 @@
     },
     {
         "id": 139,
+        "category": "console",
+        "difficulty": "Medium",
         "question": "What will happen here?\n\n```js\nfunction grandparent() {\n  console.log(\"grandParent\");\n  parent();\n}\n\nfunction parent() {\n  console.log(\"grandParent\");\n  child();\n}\n\nfunction child() {\n  console.log(\"grandParent\");\n  innerchild();\n}\n\nfunction innerchild() {\n  console.trace();\n}\n\ngrandparent();\n```",
         "options": {
             "A": "Logs call stack trace from innerchild to grandparent",
@@ -1669,6 +2059,8 @@
     },
     {
         "id": 140,
+        "category": "try-catch-finally",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nfunction test() {\n  try {\n    return 1;\n  } finally {\n    return 2;\n  }\n}\n\nconst res = test();\nconsole.log(res);\n```",
         "options": {
             "A": "1",
@@ -1681,6 +2073,8 @@
     },
     {
         "id": 141,
+        "category": "function parameters",
+        "difficulty": "Medium",
         "question": "What happens if you declare a function or arrow function with duplicate parameter names?\n\n```js\nconst show = (b, b) => {}\n\nfunction test(a, a) {}\n```",
         "options": {
             "A": "No error, works fine",
@@ -1693,6 +2087,8 @@
     },
     {
         "id": 142,
+        "category": "function parameters",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nfunction test(a, a) {\n    console.log(a);\n}\ntest(5);\n```",
         "options": {
             "A": "5",
@@ -1705,6 +2101,8 @@
     },
     {
         "id": 143,
+        "category": "function name",
+        "difficulty": "Easy",
         "question": "What will this code output?\n\n```js\nfunction JS() {\n    console.log(\"Hii\");\n}\n\nconsole.log(JS.name);\n```",
         "options": {
             "A": "\"Hii\"",
@@ -1717,6 +2115,8 @@
     },
     {
         "id": 144,
+        "category": "function invocation",
+        "difficulty": "Easy",
         "question": "How to call a function without parentheses?\n\n```js\nfunction show() {\n    console.log(\"Hii neel\");\n}\n\nnew show;\n```",
         "options": {
             "A": "Using `new` keyword invokes function without parentheses",
@@ -1729,6 +2129,8 @@
     },
     {
         "id": 145,
+        "category": "scope and hoisting",
+        "difficulty": "Medium",
         "question": "What will be the output?\n\n```js\nfunction a() {\n  var var1 = 2, var2 = 3;\n}\n\nfunction b() {\n  var var1 = var2 = 1;\n}\na();\nconsole.log(var1, var2);\nb();\nconsole.log(var2);\n```",
         "options": {
             "A": "ReferenceError, ReferenceError",
@@ -1741,6 +2143,8 @@
     },
     {
         "id": 146,
+        "category": "nullish coalescing",
+        "difficulty": "Medium",
         "question": "What is the difference between using `||` and `??` in this function?\n\n```js\nfunction showMessage(marks) {\n  const message = marks || \"Absent\";\n  console.log(`marks ${message}`);\n}\n\nshowMessage(44);\nshowMessage(0);\nshowMessage(60);\n```\n\nvs\n\n```js\nfunction showMessage(marks) {\n  const message = marks ?? \"Absent\";\n  console.log(`marks ${message}`);\n}\n\nshowMessage(44);\nshowMessage(0);\nshowMessage(60);\n```",
         "options": {
             "A": "`||` and `??` behave the same",
@@ -1753,6 +2157,8 @@
     },
     {
         "id": 147,
+        "category": "currying",
+        "difficulty": "Medium",
         "question": "What will this function invocation output?\n\n```js\nconst add = (x) => (y) => (z) => {\n  console.log(x, y, z);\n  console.log(x + y + z);\n};\n\nadd(10)(10)(10);\n\n// Equivalent traditional function\nfunction add(x) {\n  return function (y) {\n    return function (z) {\n      return x + y + z;\n    };\n  };\n}\n```",
         "options": {
             "A": "Logs 10 10 10 and 30",
@@ -1765,6 +2171,8 @@
     },
     {
         "id": 148,
+        "category": "truthy falsy",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nlet bool1 = false;\nlet bool2 = new Boolean(false);\n\nif(bool1) {\n  console.log(\"First Block\");\n}\nif(bool2) {\n  console.log(\"Second Block\");\n}\n```",
         "options": {
             "A": "Logs both blocks",
@@ -1777,7 +2185,9 @@
     },
     {
         "id": 149,
-        "question": "Fix this bug when retrieving a boolean false from localStorage:\n\n```js\nlocalStorage.setItem(\"pass\", false);\nlet ispass = localStorage.getItem(\"pass\");\n\nif(ispass){\n  console.log(\"You passed\");\n} else {\n  console.log(\"You will pass\");\n}\n```\n",
+        "category": "localStorage",
+        "difficulty": "Medium",
+        "question": "Fix this bug when retrieving a boolean false from localStorage:\n\n```js\nlocalStorage.setItem(\"pass\", false);\nlet ispass = localStorage.getItem(\"pass\");\n\nif(ispass){\n  console.log(\"You passed\");\n} else {\n  console.log(\"You will pass\");\n}\n```",
         "options": {
             "A": "No fix needed",
             "B": "Use `ispass !== \"false\"` in condition",
@@ -1789,6 +2199,8 @@
     },
     {
         "id": 150,
+        "category": "coercion",
+        "difficulty": "Medium",
         "question": "What will be the output?\n\n```js\nlet randomkey = {name:\"neel\"};\nrandomkey = 23;\n\nif(!randomkey === String) {\n  console.log(\"It is not a string\");\n} else {\n  console.log(\"It is a string\");\n}\n```",
         "options": {
             "A": "\"It is not a string\"",
@@ -1801,6 +2213,8 @@
     },
     {
         "id": 151,
+        "category": "truthy/falsy",
+        "difficulty": "Easy",
         "question": "What will be the output?\n\n```js\nconst list = [1,2];\n\nif(list.indexOf(1)) {\n  console.log(\"We have 1\");\n} else {\n  console.log(\"Error\");\n}\n```",
         "options": {
             "A": "\"We have 1\"",
@@ -1813,7 +2227,9 @@
     },
     {
         "id": 152,
-        "question": "What is a better way to optimize this loop?\n\n```js\nconst data = new Array(100);\n\nfor(let i = 0; i < data.length; i++) {\n  console.log(i);\n}\n```\n",
+        "category": "loops",
+        "difficulty": "Medium",
+        "question": "What is a better way to optimize this loop?\n\n```js\nconst data = new Array(100);\n\nfor(let i = 0; i < data.length; i++) {\n  console.log(i);\n}\n```",
         "options": {
             "A": "No optimization needed",
             "B": "Store data.length in a variable before the loop",
@@ -1825,6 +2241,8 @@
     },
     {
         "id": 153,
+        "category": "loops",
+        "difficulty": "Medium",
         "question": "Find the bug in this sum function:\n\n```js\nfunction sum(num) {\n  var result = 0;\n  for (var i = 0; i <= num.length; i++) {\n    result = result + num[i];\n  }\n  return result;\n}\n\nvar numbers = [1, 2, 3, 4];\nconsole.log(sum(numbers));\n```\n",
         "options": {
             "A": "No bug, works fine",
@@ -1837,6 +2255,8 @@
     },
     {
         "id": 154,
+        "category": "spread",
+        "difficulty": "Easy",
         "question": "What will be the output of this function call?\n\n```js\nfunction sum(x, y, z) {\n  return x + y + z;\n}\n\nconsole.log(sum(...[1, 2, 3]));\n```\n",
         "options": {
             "A": "6",
@@ -1849,6 +2269,8 @@
     },
     {
         "id": 155,
+        "category": "find",
+        "difficulty": "Easy",
         "question": "What does this code do?\n\n```js\nconst arr = [\n  {id: 1, name: \"Neel\"},\n  {id: 2, name: \"Ashok\"},\n  {id: 3, name: \"Samel\"}\n];\n\nconst res = arr.find(chk) || {};\n\nfunction chk(data) {\n  return data.id === 2;\n}\n\nconsole.log(res);\n```\n",
         "options": {
             "A": "Finds object with id 2 or returns empty object if not found",
@@ -1861,6 +2283,8 @@
     },
     {
         "id": 156,
+        "category": "Objects",
+        "difficulty": "Easy",
         "question": "What will be logged?\n\n```js\nconst obj = { 1: \"a\", 2: \"b\", 3: \"c\" };\nconsole.log(obj.hasOwnProperty(\"1\"));\nconsole.log(obj.hasOwnProperty(1));\n```",
         "options": {
             "A": "true true",
@@ -1873,6 +2297,8 @@
     },
     {
         "id": 157,
+        "category": "Constructor Functions",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nfunction car() {\n  this.make = 'audi';\n  return { make: 'bmw' };\n}\nconst mycar = new car();\nconsole.log(mycar.make);\n```",
         "options": {
             "A": "audi",
@@ -1885,6 +2311,8 @@
     },
     {
         "id": 158,
+        "category": "Reference Types",
+        "difficulty": "Easy",
         "question": "What will be logged?\n\n```js\nlet c = { greeting: \"Hey\" };\nlet d;\nd = c;\nc.greeting = \"Hello\";\nconsole.log(d.greeting);\n```",
         "options": {
             "A": "Hey",
@@ -1897,6 +2325,8 @@
     },
     {
         "id": 159,
+        "category": "Arrow Functions",
+        "difficulty": "Medium",
         "question": "What will be the output?\n\n```js\nconst income = {\n  skills: 12,\n  monthly() {\n    return this.skills * 2;\n  },\n  yearly: () => this.skills * 2,\n};\n\nconsole.log(income.monthly());\nconsole.log(income.yearly());\n```",
         "options": {
             "A": "24 24",
@@ -1909,6 +2339,8 @@
     },
     {
         "id": 160,
+        "category": "Object Keys",
+        "difficulty": "Medium",
         "question": "What will this output?\n\n```js\nconst A = {};\nconst B = { key: \"b\" };\nconst C = { key: \"c\" };\n\nA[B] = 123;\nA[C] = 456;\n\nconsole.log(A[B]);\n```",
         "options": {
             "A": "123",
@@ -1921,6 +2353,8 @@
     },
     {
         "id": 161,
+        "category": "Array Methods",
+        "difficulty": "Easy",
         "question": "What will be the output?\n\n```js\nlet data = [1, 2, 3].map(num => {\n  if (typeof num === 'number') return;\n  return num * 2;\n});\nconsole.log(data);\n```",
         "options": {
             "A": "[2, 4, 6]",
@@ -1933,6 +2367,8 @@
     },
     {
         "id": 162,
+        "category": "Array Methods",
+        "difficulty": "Easy",
         "question": "What will be the result of this map?\n\n```js\n[1, 2, 3].map(num => {\n  if (num > 0) return;\n  return num * 2;\n});\n```",
         "options": {
             "A": "[2, 4, 6]",
@@ -1945,6 +2381,8 @@
     },
     {
         "id": 163,
+        "category": "Array Methods",
+        "difficulty": "Easy",
         "question": "What will be logged?\n\n```js\nlet count = 0;\nlet num = [0, 1, 2, 3];\n\nnum.forEach(num => {\n  if (num) {\n    count = count + 1;\n  }\n});\nconsole.log(count);\n```",
         "options": {
             "A": "4",
@@ -1957,6 +2395,8 @@
     },
     {
         "id": 164,
+        "category": "Closures",
+        "difficulty": "Easy",
         "question": "What will this IIFE print?\n\n```js\n(function(x) {\n  return (function(y) {\n    console.log(x);\n  })(2);\n})(1);\n```",
         "options": {
             "A": "1",
@@ -1969,6 +2409,8 @@
     },
     {
         "id": 165,
+        "category": "Promise",
+        "difficulty": "Medium",
         "question": "What will be logged here?\n\n```js\nfunction task() {\n  return new Promise((res) => {\n    res(\"data\");\n  });\n}\n\nconst result = task().then();\nconsole.log(result);\n```",
         "options": {
             "A": "Promise { <pending> }",
@@ -1981,6 +2423,8 @@
     },
     {
         "id": 166,
+        "category": "Promise",
+        "difficulty": "Easy",
         "question": "What will be logged?\n\n```js\nconsole.log(1);\n\nnew Promise((res) => {\n  console.log(2);\n});\n\nconsole.log(3);\n```",
         "options": {
             "A": "1 3 2",
@@ -1993,6 +2437,8 @@
     },
     {
         "id": 167,
+        "category": "Functions",
+        "difficulty": "Easy",
         "question": "What happens here?\n\n```js\nconst anonymous = function test() {\n  console.log(\"Hii neel\");\n}\ntest();\n```",
         "options": {
             "A": "Logs 'Hii neel'",
@@ -2005,6 +2451,8 @@
     },
     {
         "id": 168,
+        "category": "Async/Await",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nasync function getData() {\n  return await Promise.resolve(\"Solved\");\n}\n\nconst data = getData();\nconsole.log(data);\n// data.then(res => console.log(res));\n```",
         "options": {
             "A": "Solved",
@@ -2017,6 +2465,8 @@
     },
     {
         "id": 169,
+        "category": "Async/Await",
+        "difficulty": "Medium",
         "question": "What is the order of logs here?\n\n```js\nconsole.log(\"A\");\n(async function () {\n  let x = await 5;\n  console.log(\"C\");\n})();\nconsole.log(\"B\");\n```",
         "options": {
             "A": "A B C",
@@ -2029,6 +2479,8 @@
     },
     {
         "id": 170,
+        "category": "Event Loop",
+        "difficulty": "Hard",
         "question": "What is the order of output?\n\n```js\nsetTimeout(() => {\n  console.log(\"1\");\n}, 0);\n\nPromise.resolve().then(() => {\n  console.log(\"2\");\n});\n\nqueueMicrotask(() => {\n  console.log(\"3\");\n});\n\nconsole.log(\"4\");\n```",
         "options": {
             "A": "4 1 2 3",
@@ -2041,6 +2493,8 @@
     },
     {
         "id": 171,
+        "category": "event loop",
+        "difficulty": "Medium",
         "question": "What will happen here?\n\n```js\nsetTimeout(() => {\n  console.log(\"Neel samel\");\n}, Infinity);\n\nsetTimeout(() => {\n  console.log(\"Neel samel\");\n}, 2147483647);\n\nconsole.log(Math.pow(2, 32) / 2 - 1);\n```",
         "options": {
             "A": "Both messages will print immediately",
@@ -2053,6 +2507,8 @@
     },
     {
         "id": 172,
+        "category": "hoisting",
+        "difficulty": "Hard",
         "question": "What will this log?\n\n```js\nlet x = [typeof x, typeof y];\nconsole.log(x);\n```",
         "options": {
             "A": "[\"undefined\", \"undefined\"]",
@@ -2065,6 +2521,8 @@
     },
     {
         "id": 173,
+        "category": "hoisting",
+        "difficulty": "Easy",
         "question": "What will be printed?\n\n```js\nconsole.log(a);\nvar a;\n```",
         "options": {
             "A": "undefined",
@@ -2077,6 +2535,8 @@
     },
     {
         "id": 174,
+        "category": "event loop",
+        "difficulty": "Easy",
         "question": "What will the output be?\n\n```js\nconst a = () => console.log(\"neel\");\nconst b = () => setTimeout(() => { console.log(\"last\"); });\nconst c = () => console.log(\"neha\");\na();\nb();\nc();\n```",
         "options": {
             "A": "neel neha last",
@@ -2089,6 +2549,8 @@
     },
     {
         "id": 175,
+        "category": "strict mode",
+        "difficulty": "Medium",
         "question": "What will happen when running this?\n\n```js\nfunction getage() {\n  'use strict';\n  age: 23;\n  console.log(age);\n}\ngetage();\n```",
         "options": {
             "A": "Logs 23",
@@ -2101,6 +2563,8 @@
     },
     {
         "id": 176,
+        "category": "event loop",
+        "difficulty": "Medium",
         "question": "What will this code print?\n\n```js\nfor(var x = 0; x < 3; x++) {\n  setTimeout(() => console.log(x));\n}\n```",
         "options": {
             "A": "0 1 2",
@@ -2113,6 +2577,8 @@
     },
     {
         "id": 177,
+        "category": "event loop",
+        "difficulty": "Easy",
         "question": "What will this log?\n\n```js\nlet a = \"Neel\";\nsetTimeout(() => {\n  console.warn(a);\n}, 0);\na = \"neha\";\n```",
         "options": {
             "A": "Neel",
@@ -2125,6 +2591,8 @@
     },
     {
         "id": 178,
+        "category": "hoisting",
+        "difficulty": "Medium",
         "question": "What will this function print?\n\n```js\nfunction fruits() {\n  console.log(a);\n  console.log(b);\n\n  var a = \"apple\";\n  let b = \"orange\";\n}\nfruits();\n```",
         "options": {
             "A": "undefined 'orange'",
@@ -2137,6 +2605,8 @@
     },
     {
         "id": 179,
+        "category": "temporal dead zone",
+        "difficulty": "Medium",
         "question": "What will happen here?\n\n```js\nlet name = \"neel\";\nfunction chK() {\n  console.log(name);\n  let name = \"neha\";\n}\nchK();\n```",
         "options": {
             "A": "neel",
@@ -2149,6 +2619,8 @@
     },
     {
         "id": 180,
+        "category": "JavaScript",
+        "difficulty": "Medium",
         "question": "What will be logged?\n\n```js\nconst bird = { name: \"Sparrow\" };\nconst animal = { name: \"Lion\" };\nfunction show() { console.log(this.name); }\nconst objshow = show.bind(bird);\nobjshow.call(animal);\n```\n",
         "options": {
             "A": "\"Lion\"",
@@ -2161,7 +2633,9 @@
     },
     {
         "id": 181,
-        "question": "What will be the output?\n\n```js\nconst person = { name: \"neel\" };\nfunction detail() { return this.name; }\nconsole.log(detail.call(person));\nconsole.log(detail.bind(person));\n```\n",
+        "category": "Functions and This",
+        "difficulty": "Easy",
+        "question": "What will be the output?\n\n```js\nconst person = { name: \"neel\" };\nfunction detail() { return this.name; }\nconsole.log(detail.call(person));\nconsole.log(detail.bind(person));\n```",
         "options": {
             "A": "\"neel\" and function definition",
             "B": "undefined and \"neel\"",
@@ -2173,7 +2647,9 @@
     },
     {
         "id": 182,
-        "question": "What will happen when calling this function?\n\n```js\nconst person = {\n  lang: \"Js\",\n  show: function () { console.log(`Language ${this.lang}`); }\n};\nconst fn = person.show;\nfn();\n```\n",
+        "category": "Functions and This",
+        "difficulty": "Medium",
+        "question": "What will happen when calling this function?\n\n```js\nconst person = {\n  lang: \"Js\",\n  show: function () { console.log(`Language ${this.lang}`); }\n};\nconst fn = person.show;\nfn();\n```",
         "options": {
             "A": "Logs 'Language Js'",
             "B": "Logs 'Language undefined'",
@@ -2185,7 +2661,9 @@
     },
     {
         "id": 183,
-        "question": "What does this output?\n\n```js\nfunction test() {\n  console.log(typeof this);\n}\ntest.call();\n```\n",
+        "category": "Functions and This",
+        "difficulty": "Easy",
+        "question": "What does this output?\n\n```js\nfunction test() {\n  console.log(typeof this);\n}\ntest.call();\n```",
         "options": {
             "A": "\"undefined\"",
             "B": "\"object\"",
@@ -2197,7 +2675,9 @@
     },
     {
         "id": 184,
-        "question": "What is logged here?\n\n```js\nvar person = {\n  name: \"Neel\",\n  age: 25,\n  getage: function () { return this.age; }\n};\nvar person2 = { age: 25 };\nconsole.log(person.getage.call(person2));\n```\n",
+        "category": "Functions and This",
+        "difficulty": "Easy",
+        "question": "What is logged here?\n\n```js\nvar person = {\n  name: \"Neel\",\n  age: 25,\n  getage: function () { return this.age; }\n};\nvar person2 = { age: 25 };\nconsole.log(person.getage.call(person2));\n```",
         "options": {
             "A": "25",
             "B": "undefined",
@@ -2209,7 +2689,9 @@
     },
     {
         "id": 185,
-        "question": "What happens with this Proxy example?\n\n```js\nconst handler = {\n  set: (target, property, value) =>\n    console.log(\"Add new Property\", target, property, value),\n  get: (target, property) =>\n    console.log(\"Access new Property\", target, property),\n};\nconst person = new Proxy({}, handler);\nperson.name = \"Neel\";\nperson.name;\n```\n",
+        "category": "proxy",
+        "difficulty": "Medium",
+        "question": "What happens with this Proxy example?\n\n```js\nconst handler = {\n  set: (target, property, value) =>\n    console.log(\"Add new Property\", target, property, value),\n  get: (target, property) =>\n    console.log(\"Access new Property\", target, property),\n};\nconst person = new Proxy({}, handler);\nperson.name = \"Neel\";\nperson.name;\n```",
         "options": {
             "A": "Logs messages on property add and access",
             "B": "Throws error due to handler misuse",
@@ -2221,7 +2703,9 @@
     },
     {
         "id": 186,
-        "question": "Which of these calls the function without parentheses?\n\n```js\nconst obj = {\n  show: function () { console.log(\"Neel Samel\"); },\n};\n\n// Which of these is valid?\n// 1) obj.show``\n// 2) new obj.show\n// 3) Using getter function get show() {}\n```\n",
+        "category": "function-call",
+        "difficulty": "Medium",
+        "question": "Which of these calls the function without parentheses?\n\n```js\nconst obj = {\n  show: function () { console.log(\"Neel Samel\"); },\n};\n\n// Which of these is valid?\n// 1) obj.show``\n// 2) new obj.show\n// 3) Using getter function get show() {}\n```",
         "options": {
             "A": "Only 1",
             "B": "Only 2",
@@ -2233,7 +2717,9 @@
     },
     {
         "id": 187,
-        "question": "What does this log?\n\n```js\nvar person = {\n  name: \"Neel\",\n  age: 25,\n  getage: function () { return this.age; }\n};\nconsole.log(person.getage.call(this));\n```\n",
+        "category": "this-binding",
+        "difficulty": "Easy",
+        "question": "What does this log?\n\n```js\nvar person = {\n  name: \"Neel\",\n  age: 25,\n  getage: function () { return this.age; }\n};\nconsole.log(person.getage.call(this));\n```",
         "options": {
             "A": "25",
             "B": "undefined",
@@ -2245,7 +2731,9 @@
     },
     {
         "id": 188,
-        "question": "What will be the output?\n\n```js\nconst obj = {};\nconst set1 = new Set();\nconst set2 = new Set();\n\nset1.add(obj);\nset1.add(obj);\n\nset2.add({});\nset2.add({});\n\nconsole.log(set1.size);\nconsole.log(set2.size);\n```\n",
+        "category": "set-object",
+        "difficulty": "Medium",
+        "question": "What will be the output?\n\n```js\nconst obj = {};\nconst set1 = new Set();\nconst set2 = new Set();\n\nset1.add(obj);\nset1.add(obj);\n\nset2.add({});\nset2.add({});\n\nconsole.log(set1.size);\nconsole.log(set2.size);\n```",
         "options": {
             "A": "1 and 2",
             "B": "2 and 2",
@@ -2254,5 +2742,532 @@
         },
         "answer": "A",
         "explanation": "Adding the same object reference twice counts once; adding two different objects counts twice."
+    },
+    {
+        "id": 189,
+        "category": "semantic-tags",
+        "difficulty": "Easy",
+        "question": "Which of the following tags is considered a semantic HTML tag?",
+        "options": {
+            "A": "<div>",
+            "B": "<span>",
+            "C": "<article>",
+            "D": "<b>"
+        },
+        "answer": "C",
+        "explanation": "Semantic HTML tags clearly describe their meaning in a human- and machine-readable way. `<article>` is semantic, whereas `<div>`, `<span>`, and `<b>` are not inherently semantic."
+    },
+    {
+        "id": 190,
+        "category": "structure-tags",
+        "difficulty": "Easy",
+        "question": "What is the main benefit of using the <header> and <footer> tags in HTML?",
+        "options": {
+            "A": "To create visual effects",
+            "B": "To add images and links",
+            "C": "To semantically mark up content, improving SEO and accessibility",
+            "D": "To style the page background"
+        },
+        "answer": "C",
+        "explanation": "The <header> and <footer> tags are semantic HTML elements that help structure content meaningfully. They improve SEO, accessibility, and overall document structure without adding styling or effects on their own."
+    },
+    {
+        "id": 191,
+        "category": "callback",
+        "difficulty": "Easy",
+        "question": "What is a callback function in JavaScript?",
+        "options": {
+            "A": "A function that is called when an event occurs.",
+            "B": "A function that is passed as an argument to another function to be executed later.",
+            "C": "A function that calls another function.",
+            "D": "A function that returns another function."
+        },
+        "answer": "B",
+        "explanation": "A callback function is a function passed as an argument to another function, which is then executed at a later time, often after a certain operation or event has occurred."
+    },
+    {
+        "id": 192,
+        "category": "responsive-design",
+        "difficulty": "Easy",
+        "question": "Which of the following <meta> tags is essential for making a webpage responsive?",
+        "options": {
+            "A": "<meta charset=\"UTF-8\">",
+            "B": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+            "C": "<meta name=\"keywords\" content=\"HTML, SEO\">",
+            "D": "<meta name=\"author\" content=\"John Doe\">"
+        },
+        "answer": "B",
+        "explanation": "The viewport meta tag is crucial for responsive web design as it instructs the browser to adjust the page's width and scaling based on the device screen size."
+    },
+    {
+        "id": 193,
+        "category": "form",
+        "difficulty": "Easy",
+        "question": "Identify the error in the following form input for a password:\n\n<input type=\"pass\" id=\"password\" name=\"password\">",
+        "options": {
+            "A": "The type attribute should be password",
+            "B": "The id attribute is incorrect",
+            "C": "The name attribute is missing",
+            "D": "The input tag requires a maxlength attribute"
+        },
+        "answer": "A",
+        "explanation": "The correct input type for password fields in HTML is `type=\"password\"`. The given code uses `type=\"pass\"`, which is invalid and will default to a text input field."
+    },
+    {
+        "id": 194,
+        "category": "anchor-tag",
+        "difficulty": "Medium",
+        "question": "What is wrong with the following link element?\n\n<a href=\"https://www.example.com\">Example Site</a>",
+        "options": {
+            "A": "The target attribute is missing for opening the link in a new tab",
+            "B": "The href attribute should be link",
+            "C": "The text should be inside a <p> tag",
+            "D": "The alt attribute is missing"
+        },
+        "answer": "A",
+        "explanation": "There is nothing inherently wrong with this link. However, if the intention is to open it in a new tab, the attribute `target=\"_blank\"` should be added. The `alt` attribute is only used for images, not links."
+    },
+    {
+        "id": 195,
+        "category": "list",
+        "difficulty": "Easy",
+        "question": "Find the error in the following unordered list:\n\n<ul>\n  <li>Item 1\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
+        "options": {
+            "A": "<ul> should be <ol>",
+            "B": "<li> should be <ul>",
+            "C": "The first <li> tag is not closed",
+            "D": "The ul tag requires a type attribute"
+        },
+        "answer": "C",
+        "explanation": "In an unordered list, each <li> element must have both opening and closing tags. The first <li> element 'Item 1' is missing its closing </li> tag."
+    },
+    {
+        "id": 196,
+        "category": "Events",
+        "difficulty": "Easy",
+        "question": "What will be the output of the following HTML and JavaScript code?\n\n<button onclick=\"console.log('Button clicked')\">Press Me</button>",
+        "options": {
+            "A": "An alert saying 'Button clicked' appears.",
+            "B": "The message 'Button clicked' is logged in the console.",
+            "C": "Nothing happens.",
+            "D": "The button does not display."
+        },
+        "answer": "B",
+        "explanation": "The `onclick` event handler executes the JavaScript `console.log('Button clicked')` when the button is pressed, printing the message in the browser's console."
+    },
+    {
+        "id": 197,
+        "category": "Loops",
+        "difficulty": "Easy",
+        "question": "Which of the following is the correct syntax for a while loop in JavaScript?",
+        "options": {
+            "A": "while(condition) { //code }",
+            "B": "while(condition); { //code }",
+            "C": "while ( condition //code }",
+            "D": "while (condition) { } else { //code }"
+        },
+        "answer": "A",
+        "explanation": "The correct syntax for a while loop in JavaScript is `while(condition) { //code }`. The loop runs repeatedly as long as the specified condition evaluates to true."
+    },
+    {
+        "id": 198,
+        "category": "HTML",
+        "difficulty": "Easy",
+        "question": "What will the following HTML code display?\n\n<ol>\n<li>HTML</li>\n<li>CSS</li>\n<li>JavaScript</li>\n</ol>",
+        "options": {
+            "A": "A bulleted list",
+            "B": "A list with numbered items 1, 2, 3",
+            "C": "A list with letters A, B, C",
+            "D": "A list with Roman numerals I, II, III"
+        },
+        "answer": "B",
+        "explanation": "An ordered list (<ol>) in HTML displays list items with numbers (1, 2, 3) by default unless a different list-style-type is specified."
+    },
+    {
+        "id": 199,
+        "category": "CSS",
+        "difficulty": "Easy",
+        "question": "Which display property makes an element behave like a block element while allowing inline content on the same line?",
+        "options": {
+            "A": "inline",
+            "B": "block",
+            "C": "inline-block",
+            "D": "none"
+        },
+        "answer": "C",
+        "explanation": "The `inline-block` display property makes an element behave like a block element (accepting width and height) while still allowing inline content to sit beside it on the same line."
+    },
+    {
+        "id": 200,
+        "category": "CSS",
+        "difficulty": "Easy",
+        "question": "The following code causes overlapping elements. How can you fix this?\n\n.container {\n    position: absolute;\n    left: 0;\n}\n\n.box {\n    position: relative;\n    top: -50px;\n}",
+        "options": {
+            "A": "Add z-index to .box",
+            "B": "Change .container to position: relative",
+            "C": "Add padding to .container",
+            "D": "Use display: inline for .box"
+        },
+        "answer": "B",
+        "explanation": "Changing `.container` to `position: relative` establishes a new containing block for absolutely or relatively positioned child elements like `.box`, preventing unintended overlapping."
+    },
+    {
+        "id": 201,
+        "category": "Inheritance & Specificity",
+        "difficulty": "Easy",
+        "question": "Why does the following paragraph not inherit the font color of its parent <div>?",
+        "options": {
+            "A": "The initial value overrides inheritance.",
+            "B": "Font color is not an inheritable property.",
+            "C": "The p tag has a higher specificity.",
+            "D": "The <div> needs !important to pass color"
+        },
+        "answer": "C",
+        "explanation": "In CSS, specificity can override inheritance. If a paragraph has its own style rule with higher specificity (e.g., inline styles or more targeted selectors), it will override the inherited styles from its parent unless `!important` is used."
+    },
+    {
+        "id": 202,
+        "category": "Box Model & Overflow",
+        "difficulty": "Easy",
+        "question": "The following CSS is applied, but the margin of .box is not affecting the container. What is the likely issue?\n\n.container {\n    overflow: hidden;\n}\n\n.box {\n    margin-top: 20px;\n}",
+        "options": {
+            "A": "Use overflow: visible.",
+            "B": "Add padding to .container.",
+            "C": "Add padding to .container.",
+            "D": "Remove overflow from .container"
+        },
+        "answer": "D",
+        "explanation": "When `overflow: hidden` is applied to a container, it can cause margin collapse issues, where the top margin of a child element doesn’t affect the container’s height. Removing or adjusting the overflow property can resolve this."
+    },
+    {
+        "id": 203,
+        "category": "Positioning",
+        "difficulty": "Easy",
+        "question": "Why does the sticky positioning in the following example not work?\n\n.sticky-box {\n    position: sticky;\n    top: 0;\n}",
+        "options": {
+            "A": "Sticky positioning requires overflow: auto on the parent",
+            "B": "The parent container’s height is not specified.",
+            "C": "The top property should be set to a percentage",
+            "D": "The sticky-box needs to be a flex child."
+        },
+        "answer": "A",
+        "explanation": "For `position: sticky` to work, the parent container should not have `overflow: hidden`, `scroll`, or similar values. Ideally, it should have `overflow: auto` or `visible`, otherwise sticky elements may not behave as expected."
+    },
+    {
+        "id": 204,
+        "category": "Display & Layout",
+        "difficulty": "Easy",
+        "question": "Why are the inline boxes in the following layout not aligning perfectly horizontally when using display: inline-block?",
+        "options": {
+            "A": "The parent container needs display: flex.",
+            "B": "The elements need float: left instead of inline-block.",
+            "C": "The inline-boxes should be positioned relative.",
+            "D": "There is whitespace between the inline-boxes in HTML."
+        },
+        "answer": "D",
+        "explanation": "When using display: inline-block, whitespace characters (like spaces or newlines) between elements in HTML are rendered as actual space in the layout. Removing this whitespace fixes the alignment issue."
+    },
+    {
+        "id": 205,
+        "category": "Positioning",
+        "difficulty": "Easy",
+        "question": "What is the default position property of HTML elements?",
+        "options": {
+            "A": "Relative",
+            "B": "Fixed",
+            "C": "Absolute",
+            "D": "Static"
+        },
+        "answer": "D",
+        "explanation": "By default, all HTML elements have `position: static`, meaning they follow the normal document flow. This positioning does not allow the use of offset properties like top, bottom, left, or right."
+    },
+    {
+        "id": 206,
+        "category": "CSS",
+        "difficulty": "Easy",
+        "question": "Which component of the CSS Box Model adds space between the content and the border of an element?",
+        "options": {
+            "A": "Content",
+            "B": "Padding",
+            "C": "Margin",
+            "D": "Border"
+        },
+        "answer": "B",
+        "explanation": "Padding adds space between the content and the border of an element in the CSS Box Model."
+    },
+    {
+        "id": 207,
+        "category": "CSS",
+        "difficulty": "Easy",
+        "question": "What will be the output of this HTML and CSS?",
+        "code": ".box {\n  display: none;\n}",
+        "options": {
+            "A": "The text is visible but without borders.",
+            "B": "The text is hidden but still occupies space.",
+            "C": "The text is hidden and takes no space.",
+            "D": "Throws an error due to display: none"
+        },
+        "answer": "C",
+        "explanation": "When `display: none` is applied to an element, it is completely removed from the document flow and takes up no space in the layout."
+    },
+    {
+        "id": 208,
+        "category": "Execution Context",
+        "difficulty": "Easy",
+        "question": "Which of the following statements best describes the global execution context?",
+        "code": "",
+        "options": {
+            "A": "It only contains local variables and functions.",
+            "B": "It contains the global object and is created when the script starts.",
+            "C": "It is created every time a function is called.",
+            "D": "It is used only inside block scopes."
+        },
+        "answer": "B",
+        "explanation": "The global execution context is created when the script starts and includes the global object and any variables or functions declared in the global scope."
+    },
+    {
+        "id": 209,
+        "category": "Execution Context",
+        "difficulty": "Easy",
+        "question": "What is the correct order of how the call stack handles function execution?",
+        "code": "",
+        "options": {
+            "A": "First In, First Out (FIFO)",
+            "B": "Last In, Last Out (LILO)",
+            "C": "First In, Last Out (FILO)",
+            "D": "Last In, First Out (LIFO)"
+        },
+        "answer": "D",
+        "explanation": "The call stack uses the Last In, First Out (LIFO) principle. The last function pushed onto the stack is the first to be popped off and executed."
+    },
+    {
+        "id": 210,
+        "category": "Scope",
+        "difficulty": "Easy",
+        "question": "What does the scope chain allow?",
+        "code": "",
+        "options": {
+            "A": "The creation of local variables within a function.",
+            "B": "The definition of functions within another function.",
+            "C": "Resolving variables by checking outer environments if not found locally.",
+            "D": "Avoiding hoisting of variables."
+        },
+        "answer": "C",
+        "explanation": "The scope chain allows the interpreter to resolve variables by looking up through outer lexical environments when a variable is not found in the current scope."
+    },
+    {
+        "id": 211,
+        "category": "Hoisting",
+        "difficulty": "Easy",
+        "question": "Find the error in the following code:",
+        "code": "function sayHello() {\n  console.log(message);\n  var message = \"Hello!\";\n}\nsayHello();",
+        "options": {
+            "A": "message should be a global variable.",
+            "B": "The variable message is not hoisted properly.",
+            "C": "The variable message is not initialized before console.log.",
+            "D": "The function sayHello cannot be called like this."
+        },
+        "answer": "C",
+        "explanation": "Although `var` is hoisted, only its declaration is hoisted, not its initialization. So `console.log(message)` runs before `message = \"Hello!\"`, and prints `undefined` because the variable exists but hasn’t been assigned a value yet."
+    },
+    {
+        "id": 212,
+        "category": "Recursion & Stack",
+        "difficulty": "Easy",
+        "question": "Identify the issue in the following code causing stack overflow:",
+        "code": "function repeat() {\n  repeat();\n}\nrepeat();",
+        "options": {
+            "A": "Infinite recursion (fn calling itself) with no base case (stopping condtn.) causes a stack overflow.",
+            "B": "Function repeat is improperly declared.",
+            "C": "The repeat function is not called properly.",
+            "D": "The repeat function is not called properly. It is not possible to call a function recursively in JavaScript."
+        },
+        "answer": "A",
+        "explanation": "The function `repeat()` calls itself recursively without a base condition, leading to infinite recursion and eventually a stack overflow error in JavaScript."
+    },
+    {
+        "id": 213,
+        "category": "Hoisting & Temporal Dead Zone",
+        "difficulty": "Easy",
+        "question": "Which of the following will prevent a ReferenceError due to hoisting?",
+        "code": "console.log(myVar);\nlet myVar = \"Not hoisted\";",
+        "options": {
+            "A": "Changing let to var",
+            "B": "Declaring myVar before logging it",
+            "C": "Using const instead of let",
+            "D": "Wrapping the code in a function"
+        },
+        "answer": "B",
+        "explanation": "In JavaScript, variables declared with `let` are not hoisted to the top in the same way as `var`. Accessing them before declaration results in a ReferenceError. Declaring `myVar` before logging it avoids this issue."
+    },
+    {
+        "id": 214,
+        "category": "Hoisting",
+        "difficulty": "Easy",
+        "question": "Which of the following statements is true regarding hoisting in JavaScript?",
+        "options": {
+            "A": "Variables declared with let are fully hoisted and initialized to undefined.",
+            "B": "Variables declared with var are partially hoisted and initialized to undefined.",
+            "C": "Functions are never hoisted in JavaScript.",
+            "D": "const variables are hoisted but initialized to null."
+        },
+        "answer": "B",
+        "explanation": "Variables declared with `var` are hoisted to the top of their scope and initialized with `undefined`. In contrast, `let` and `const` are hoisted but not initialized, which causes a ReferenceError if accessed before declaration."
+    },
+    {
+        "id": 215,
+        "category": "Recursion & Stack",
+        "difficulty": "Easy",
+        "question": "Which of the following code snippets will lead to a stack overflow?",
+        "code": "function factorial(n) {\n    if (n === 1) return 1;\n    return n * factorial(n - 1);\n}\nconsole.log(factorial(5));",
+        "options": {
+            "A": "Yes, it will cause stack overflow.",
+            "B": "No, the recursion (fn calling itself) terminates correctly.",
+            "C": "It will cause a ReferenceError.",
+            "D": "The function factorial should return undefined."
+        },
+        "answer": "B",
+        "explanation": "The recursion in this code has a valid base case (`if (n === 1) return 1;`), so it terminates correctly and computes the factorial of 5 without causing a stack overflow."
+    },
+    {
+        "id": 216,
+        "category": "Lexical Scope",
+        "difficulty": "Easy",
+        "question": "What will the following code output?",
+        "code": "let greeting = \"Hi\";\n\nfunction outer() {\n    let greeting = \"Hello\";\n    function inner() {\n        console.log(greeting);\n    }\n    inner();\n}\n\nouter();",
+        "options": {
+            "A": "Hi",
+            "B": "Hello",
+            "C": "undefined",
+            "D": "ReferenceError"
+        },
+        "answer": "B",
+        "explanation": "The `inner` function has access to its outer function's scope. Since `outer` declares `greeting` as 'Hello', this value is used by `inner()`."
+    },
+    {
+        "id": 217,
+        "category": "Execution Context & Scope",
+        "difficulty": "Easy",
+        "question": "Which of the following is true regarding the variable environment in function execution contexts?",
+        "options": {
+            "A": "Local variables are stored in the global execution context.",
+            "B": "Each function execution context has its own variable environment.",
+            "C": "Local variables are accessible globally.",
+            "D": "The global variable environment stores function parameters."
+        },
+        "answer": "B",
+        "explanation": "Each function execution context in JavaScript maintains its own variable environment for local variables and parameters, separate from the global or other function contexts."
+    },
+    {
+        "id": 218,
+        "category": "Closures",
+        "difficulty": "Easy",
+        "question": "What is a closure in JavaScript?",
+        "options": {
+            "A": "A function that does not use global variables.",
+            "B": "A function bundled with its lexical environment, retaining access to the scope where it was created.",
+            "C": "A function that is called immediately after it is defined.",
+            "D": "A function that cleans up memory after execution."
+        },
+        "answer": "B",
+        "explanation": "A closure is a function combined with its lexical environment. It allows the function to access variables from the scope in which it was defined, even after that scope has closed."
+    },
+    {
+        "id": 219,
+        "category": "Closures",
+        "difficulty": "Easy",
+        "question": "Which of the following is NOT a key characteristic of closures?",
+        "options": {
+            "A": "Preserving access to variables after the outer function has finished.",
+            "B": "Enabling data privacy through encapsulation.",
+            "C": "Destroying the access to variables after the outer function has finished.",
+            "D": "Allowing functions to retain state across multiple invocations"
+        },
+        "answer": "C",
+        "explanation": "Closures preserve access to variables even after the outer function has finished. They do not destroy access — this is what makes closures powerful for data encapsulation and maintaining state."
+    },
+    {
+        "id": 220,
+        "category": "Closures",
+        "difficulty": "Easy",
+        "question": "What will be the output of the following code?\n\n```js\nfunction outer() {\n  let message = \"Hello\";\n  return function inner() {\n    return message + \" World\";\n  };\n}\nconst closure = outer();\nconsole.log(closure());\n```",
+        "options": {
+            "A": "Hello",
+            "B": "World",
+            "C": "Hello World",
+            "D": "Undefined"
+        },
+        "answer": "C",
+        "explanation": "The function `inner` forms a closure over `message`, which is defined in `outer`. Even after `outer` has returned, `inner` retains access to `message`, so calling `closure()` returns `Hello World`."
+    },
+    {
+        "id": 221,
+        "category": "Closures & Scope",
+        "difficulty": "Easy",
+        "question": "Find the error in the following closure and suggest a fix:\n\n```js\nfunction counter() {\n  let count = 0;\n  return function() {\n    console.log(count++);\n  }\n}\nconst c = counter();\nc();\nc();\nconsole.log(count);\n```",
+        "options": {
+            "A": "count should be initialized outside the function.",
+            "B": "counter() should return a function that resets the count each time.",
+            "C": "count is not accessible outside the closure.",
+            "D": "count should be declared with var instead of let."
+        },
+        "answer": "C",
+        "explanation": "The variable `count` is declared inside `counter()` and is only accessible within the returned function. Trying to access it outside, like in `console.log(count);`, results in a ReferenceError because it's not in the global scope."
+    },
+    {
+        "id": 222,
+        "category": "Closures & IIFE",
+        "difficulty": "Easy",
+        "question": "What will be the output of this code?\n\n```js\nlet counter = (function () {\n  let count = 0;\n  return function () {\n    count++;\n    console.log(count);\n  };\n})();\n\ncounter();\ncounter();\ncounter();\n```",
+        "options": {
+            "A": "0 1 2",
+            "B": "1 2 3",
+            "C": "Undefined",
+            "D": "Error"
+        },
+        "answer": "B",
+        "explanation": "The IIFE (Immediately Invoked Function Expression) creates a closure over the `count` variable. Each call to `counter()` increases `count`, which is preserved across invocations, so the output is `1 2 3`."
+    },
+    {
+        "id": 223,
+        "category": "Hoisting & Temporal Dead Zone",
+        "difficulty": "Easy",
+        "question": "Which of the following will prevent a ReferenceError due to hoisting?\n\n```js\nconsole.log(myVar);\nlet myVar = \"Not hoisted\";\n```",
+        "options": {
+            "A": "Changing let to var",
+            "B": "Declaring myVar before logging it",
+            "C": "Using const instead of let",
+            "D": "Wrapping the code in a function"
+        },
+        "answer": "B",
+        "explanation": "Using `let` or `const` creates a temporal dead zone, and accessing the variable before declaration results in a ReferenceError. To avoid this, declare `myVar` before accessing it."
+    },
+    {
+        "id": 224,
+        "category": "Closures & Scope",
+        "difficulty": "Medium",
+        "question": "Identify the bug in the following code:\n\n```js\nfunction createLogger() {\n  var logs = [];\n  return function (log) {\n    logs.push(log);\n    console.log(logs);\n  }\n}\nconst logData = createLogger();\nlogData(\"Test\");\nlogData(\"Debug\");\nconsole.log(logs);\n```",
+        "options": {
+            "A": "logs should be declared outside the function.",
+            "B": "logs is not accessible globally.",
+            "C": "logs must be initialized with an empty string.",
+            "D": "logs should be accessed using the return statement."
+        },
+        "answer": "B",
+        "explanation": "`logs` is declared inside the `createLogger` function and is not accessible outside of it. Attempting to access `logs` globally results in a ReferenceError."
+    },
+    {
+        "id": 225,
+        "category": "Higher-Order Functions & Closures",
+        "difficulty": "Easy",
+        "question": "What will be the output of the following code?\n\n```js\nfunction multiply(x) {\n  return function(y) {\n    return x * y;\n  }\n}\nlet multiplyBy2 = multiply(2);\nconsole.log(multiplyBy2(5));\n```",
+        "options": {
+            "A": "2",
+            "B": "5",
+            "C": "10",
+            "D": "NaN"
+        },
+        "answer": "C",
+        "explanation": "`multiply` is a higher-order function returning another function. `multiplyBy2` becomes a function that multiplies its input by 2. So `multiplyBy2(5)` returns `2 * 5 = 10`."
     }
 ]
