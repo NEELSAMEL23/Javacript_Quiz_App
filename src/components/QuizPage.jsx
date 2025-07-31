@@ -32,7 +32,7 @@ const QuizPage = ({ data }) => {
     }
   };
   return (
-    <div className="flex flex-col h-full  bg-gradient-to-r from-purple-700 to-orange-500 text-white">
+    <div className="flex flex-col pb-3 min-h-screen  bg-gradient-to-r from-purple-700 to-orange-500 text-white">
       <main className="flex-grow p-6 flex  flex-col justify-center">
         <QuizCard data={currentQuestion} selected={selected} setSelected={setSelected} />
         <div className="mt-8 bg-purple-800 p-4 rounded shadow-inner">

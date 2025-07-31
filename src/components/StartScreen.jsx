@@ -20,9 +20,7 @@ const StartScreen = ({ total }) => {
                     Start
                 </button>
             </main>
-            <footer className="text-center p-4 text-xs sm:text-sm">
-                &copy; {new Date().getFullYear()} JavaScript Quiz App
-            </footer>
+            
         </div>
     );
 };
