@@ -3269,5 +3269,425 @@
         },
         "answer": "C",
         "explanation": "`multiply` is a higher-order function returning another function. `multiplyBy2` becomes a function that multiplies its input by 2. So `multiplyBy2(5)` returns `2 * 5 = 10`."
+    },
+    {
+        "id": 226,
+        "category": "Higher-Order Functions & Closures",
+        "difficulty": "Easy",
+        "question": "What is a Higher-Order Function (HOF) in JavaScript?",
+        "options": {
+            "A": "A function that returns a string",
+            "B": "A function that manipulates arrays",
+            "C": "A function that takes or returns another function",
+            "D": "A function that directly modifies objects"
+        },
+        "answer": "C",
+        "explanation": "A Higher-Order Function in JavaScript is a function that takes another function as an argument or returns a function as its result."
+    },
+    {
+        "id": 227,
+        "category": "Array Methods",
+        "difficulty": "Easy",
+        "question": "What is the key difference between the map() and forEach() methods in JavaScript?",
+        "options": {
+            "A": "forEach() returns a new array, while map() does not",
+            "B": "map() performs transformations and returns a new array, while forEach() is used for side effects and returns undefined",
+            "C": "Both are identical in behavior",
+            "D": "forEach() can be chained, but map() cannot"
+        },
+        "answer": "B",
+        "explanation": "map() is used to create a new array by transforming elements, while forEach() simply executes a function for each element without returning a new array (returns undefined)."
+    },
+    {
+        "id": 228,
+        "category": "Array Methods",
+        "difficulty": "Easy",
+        "question": "What is the default behavior of the sort() method in JavaScript?",
+        "options": {
+            "A": "Sorts numbers in ascending order",
+            "B": "Sorts strings based on Unicode values",
+            "C": "Sorts objects by their properties",
+            "D": "Sorts arrays randomly"
+        },
+        "answer": "B",
+        "explanation": "By default, the sort() method in JavaScript converts elements to strings and sorts them based on their Unicode code point values."
+    },
+    {
+        "id": 229,
+        "category": "Array Methods",
+        "difficulty": "Easy",
+        "question": "Find the error in the following map() code:\n\n```js\nconst numbers = [10, 20, 30];\nconst doubled = numbers.map(num => { num * 2; });\nconsole.log(doubled);\n```",
+        "options": {
+            "A": "map() should return an array, not undefined",
+            "B": "The function should return num * 2 inside the callback",
+            "C": "numbers needs to be a string array",
+            "D": "map() cannot be used with numbers"
+        },
+        "answer": "B",
+        "explanation": "In arrow functions with curly braces, you need to explicitly use the return statement. The correct code is:\n```js\nconst doubled = numbers.map(num => { return num * 2; });\n```"
+    },
+    {
+        "id": 230,
+        "category": "Array Methods",
+        "difficulty": "Easy",
+        "question": "Identify the issue with the reduce() method usage below:\n\n```js\nconst sum = [1, 2, 3].reduce((acc, val) => acc + val);\nconsole.log(sum);\n```",
+        "options": {
+            "A": "reduce() requires a second argument, initialValue",
+            "B": "reduce() should return an array",
+            "C": "The callback function should be ((acc, val) => acc * val)",
+            "D": "reduce() cannot be used on numbers"
+        },
+        "answer": "A",
+        "explanation": "While reduce() can work without an initial value, it's best practice to always provide one. Omitting it may lead to errors with empty arrays. The correct usage is:\n```js\nconst sum = [1, 2, 3].reduce((acc, val) => acc + val, 0);\n```"
+    },
+    {
+        "id": 231,
+        "category": "Array Methods",
+        "difficulty": "Easy",
+        "question": "Find the issue in this filter() function:\n\n```js\nconst evenNumbers = [1, 2, 3, 4].filter(function(num) {\n  num % 2 === 0;\n});\nconsole.log(evenNumbers);\n```",
+        "options": {
+            "A": "filter() does not work with numbers",
+            "B": "filter() should return num % 2 === 0 in the callback",
+            "C": "num % 2 will return a string",
+            "D": "filter() cannot be chained"
+        },
+        "answer": "B",
+        "explanation": "In the filter callback function, a return statement is required to specify the condition. The correct code is:\n```js\nconst evenNumbers = [1, 2, 3, 4].filter(function(num) {\n  return num % 2 === 0;\n});\n```"
+    },
+    {
+        "id": 232,
+        "category": "Array Methods",
+        "difficulty": "Easy",
+        "question": "What is the output of this code snippet?\n\n```js\nconst numbers = [1, 2, 3];\nconst total = numbers.reduce((acc, val) => acc + val, 0);\nconsole.log(total);\n```",
+        "options": {
+            "A": "3",
+            "B": "6",
+            "C": "0",
+            "D": "9"
+        },
+        "answer": "B",
+        "explanation": "The reduce() method sums all elements of the array starting from the initial value 0. Calculation: 0+1+2+3 = 6."
+    },
+    {
+        "id": 233,
+        "category": "Array Methods",
+        "difficulty": "Easy",
+        "question": "Which of the following operations modifies the original array?",
+        "options": {
+            "A": "map()",
+            "B": "filter()",
+            "C": "reduce()",
+            "D": "sort()"
+        },
+        "answer": "D",
+        "explanation": "The `sort()` method modifies the original array by rearranging its elements in place. Other methods like `map()`, `filter()`, and `reduce()` return new arrays or values without altering the original array."
+    },
+    {
+        "id": 234,
+        "category": "Array Methods",
+        "difficulty": "Medium",
+        "question": "What will the output of the following chained methods be?\n\nconst values = [2, 3, 4];\nconst result = values.map(x => x + 1).reduce((a, b) => a * b);\nconsole.log(result);",
+        "options": {
+            "A": "48",
+            "B": "36",
+            "C": "60",
+            "D": "12"
+        },
+        "answer": "C",
+        "explanation": "The `map()` method adds 1 to each element, producing [3, 4, 5]. The `reduce()` method multiplies them: 3 * 4 * 5 = 60."
+    },
+    {
+        "id": 235,
+        "category": "Array Methods",
+        "difficulty": "Easy",
+        "question": "What is the output of the following code?\n\nconst result = [5, 10, 15].reduce((acc, val) => acc + val, 5);\nconsole.log(result);",
+        "options": {
+            "A": "20",
+            "B": "25",
+            "C": "30",
+            "D": "35"
+        },
+        "answer": "D",
+        "explanation": "The reduce function starts with the initial value 5 and adds each element: 5 + 5 = 10, 10 + 10 = 20, 20 + 15 = 35. So the final result is 35."
+    },
+    {
+        "id": 236,
+        "category": "JSON",
+        "difficulty": "Easy",
+        "question": "What is the purpose of the JSON.stringify() method in JavaScript?",
+        "options": {
+            "A": "It converts a JavaScript object to a JSON string.",
+            "B": "It parses a JSON string into a JavaScript object.",
+            "C": "It converts a JavaScript function to a JSON string.",
+            "D": "It converts a JavaScript object into an array."
+        },
+        "answer": "A",
+        "explanation": "JSON.stringify() is used to convert a JavaScript object into a JSON string. This is helpful when you need to store or send the object as text, such as when making API requests or using localStorage."
+    },
+    {
+        "id": 237,
+        "category": "this keyword",
+        "difficulty": "Easy",
+        "question": "Which of the following is true about the `this` keyword in JavaScript?",
+        "options": {
+            "A": "The value of this is always the global object.",
+            "B": "The value of this is determined by the object that calls the function.",
+            "C": "The value of this is always null.",
+            "D": "The value of this can only be used in constructors."
+        },
+        "answer": "B",
+        "explanation": "In JavaScript, the value of `this` depends on how a function is called. It refers to the object that is calling the function, unless in arrow functions or strict mode where behavior may differ. Hence, it is not always the global object."
+    },
+    {
+        "id": 238,
+        "category": "Function Methods",
+        "difficulty": "Easy",
+        "question": "What is the difference between the call() and apply() methods in JavaScript?",
+        "options": {
+            "A": "The call() method is used to invoke a function with a specified this context, while apply() invokes the function with an array of arguments.",
+            "B": "The apply() method is used to invoke a function with a specified this context, while call() invokes the function with an array of arguments.",
+            "C": "The call() and apply() methods are identical and can be used interchangeably.",
+            "D": "The call() method allows passing the this context, but apply() does not."
+        },
+        "answer": "A",
+        "explanation": "Both call() and apply() are used to invoke functions with a specified this value. The difference is in how arguments are passed: call() accepts a list of arguments, while apply() accepts a single array of arguments."
+    },
+    {
+        "id": 239,
+        "category": "Function Methods",
+        "difficulty": "Easy",
+        "question": "Which of the following methods allows you to bind a specific this context to a function for later execution?",
+        "options": {
+            "A": "bind()",
+            "B": "apply()",
+            "C": "call()",
+            "D": "setTimeout()"
+        },
+        "answer": "A",
+        "explanation": "The bind() method creates a new function with the specified this value, allowing you to bind a specific context to a function that can be executed later. Unlike call() and apply(), bind() does not execute the function immediately."
+    },
+    {
+        "id": 240,
+        "category": "Function Methods",
+        "difficulty": "Easy",
+        "question": "What will the following code output?",
+        "code": "let person = { name: \"John\" };\nfunction greet() {\n    console.log(\"Hello, \" + this.name);\n}\nlet greetPerson = greet.bind(person);\ngreetPerson();",
+        "options": {
+            "A": "Hello, John",
+            "B": "Hello, undefined",
+            "C": "Hello, this.name",
+            "D": "TypeError"
+        },
+        "answer": "A",
+        "explanation": "The bind() method creates a new function with 'this' bound to the 'person' object. When greetPerson() is called, 'this.name' evaluates to 'John'."
+    },
+    {
+        "id": 241,
+        "category": "Promises",
+        "difficulty": "Easy",
+        "question": "Find the error in this Promise syntax:",
+        "code": "let promise = new Promise((resolve, reject) => {\n    setTimeout(() => {\n        reject(\"An error occurred\");\n    }, 1000);\n});\n\npromise.then((result) => {\n    console.log(result);\n});",
+        "options": {
+            "A": "reject should be resolve.",
+            "B": "catch is needed to handle the error.",
+            "C": "Promises cannot use setTimeout.",
+            "D": "The code is correct."
+        },
+        "answer": "B",
+        "explanation": "The code creates a rejected Promise, but the rejection is not being handled with a .catch() block. Without it, any rejection will go unhandled, possibly throwing an unhandled promise rejection warning or error."
+    },
+    {
+        "id": 242,
+        "category": "Promises",
+        "difficulty": "Easy",
+        "question": "What will happen with the following chain of promises if one promise rejects?",
+        "code": "promise1\n  .then(() => promise2)\n  .then(() => promise3)\n  .then(() => console.log(\"All done\"))\n  .catch(() => console.log(\"Error caught\"));",
+        "options": {
+            "A": "It will skip to the next then regardless of rejection",
+            "B": "It will only log \"All done\" if all promises are resolved",
+            "C": "It will never execute the catch",
+            "D": "It will log \"All done\" even if any promise is rejected"
+        },
+        "answer": "B",
+        "explanation": "In a chain of promises, if any promise is rejected and not handled within a `.then()` block, the control moves to the `.catch()` block. Therefore, 'All done' is only logged if all promises are successfully resolved."
+    },
+    {
+        "id": 243,
+        "category": "Callbacks",
+        "difficulty": "Easy",
+        "question": "Identify the mistake in this code that fetches data with a callback:",
+        "code": "function fetchData(callback) {\n    setTimeout(() => {\n        let data = \"Server data\";\n        callback;\n    }, 1000);\n}\n\nfetchData((data) => console.log(data));",
+        "options": {
+            "A": "callback should be invoked with parentheses",
+            "B": "data is undefined",
+            "C": "callback should not take parameter",
+            "D": "setTimeout is unnecessary"
+        },
+        "answer": "A",
+        "explanation": "In the code, `callback` is referenced but not invoked. It should be `callback(data)` to pass the data to the callback function. Without the parentheses, the callback is not executed."
+    },
+    {
+        "id": 244,
+        "category": "Asynchronous JavaScript",
+        "difficulty": "Easy",
+        "question": "What is the output of the following code?",
+        "code": "console.log(\"Start\");\n\nsetTimeout(() => {\n    console.log(\"Task completed\");\n}, 1000);\n\nconsole.log(\"End\");",
+        "options": {
+            "A": "Start, Task completed, End",
+            "B": "Start, End, Task completed",
+            "C": "Task completed, Start, End",
+            "D": "End, Task completed, Start"
+        },
+        "answer": "B",
+        "explanation": "JavaScript is single-threaded and asynchronous operations (like setTimeout) are handled in the event loop. First, 'Start' is logged. Then 'End' is logged. After 1 second, 'Task completed' is logged. So the output order is: Start, End, Task completed."
+    },
+    {
+        "id": 245,
+        "category": "JavaScript Promises",
+        "difficulty": "Easy",
+        "question": "What is the output of this code snippet using promises?",
+        "code": "let promise = new Promise((resolve) => {\n    resolve(\"Success!\");\n});\n\npromise\n    .then((result) => {\n        console.log(result);\n        return result;\n    })\n    .then((result) => {\n        console.log(result + \" Again\");\n    });",
+        "options": {
+            "A": "Success!",
+            "B": "Success! Success!",
+            "C": "Success! Success! Again",
+            "D": "Success! Again"
+        },
+        "answer": "D",
+        "explanation": "In the first `.then`, it logs `Success!` and returns that string. The second `.then` receives the returned value and logs `Success! Again`. So the final output is:\nSuccess!\nSuccess! Again"
+    },
+    {
+        "id": 246,
+        "category": "JavaScript Functions",
+        "difficulty": "Easy",
+        "question": "What is a primary benefit of using Factory Functions in JavaScript?",
+        "options": {
+            "A": "They enable the use of the new keyword to create objects.",
+            "B": "They simplify object creation by encapsulating the object creation process within a function.",
+            "C": "They make objects immutable.",
+            "D": "They allow adding properties directly to the prototype of the function."
+        },
+        "answer": "B",
+        "explanation": "Factory functions are functions that return objects. They encapsulate the object creation process, making it easier to manage and reuse. Unlike constructor functions, they don't require the `new` keyword and provide more flexibility in object creation patterns."
+    },
+    {
+        "id": 247,
+        "category": "JavaScript Functions",
+        "difficulty": "Easy",
+        "question": "Identify the error in the following code:",
+        "code": "function car(make, model) {\n    this.make = make;\n    this.model = model;\n}\n\nlet myCar = car(\"Tesla\", \"Model S\");\nconsole.log(myCar.make);",
+        "options": {
+            "A": "myCar is not defined.",
+            "B": "this is undefined in the function.",
+            "C": "The new keyword is missing when creating myCar.",
+            "D": "this should be myCar instead."
+        },
+        "answer": "C",
+        "explanation": "The function `car` is intended to be used as a constructor, which requires the `new` keyword. Without `new`, `this` inside the function refers to the global object (or `undefined` in strict mode), and `myCar` will be `undefined`. Correct usage: `let myCar = new car(\"Tesla\", \"Model S\");`."
+    },
+    {
+        "id": 248,
+        "category": "JavaScript Objects",
+        "difficulty": "Easy",
+        "question": "What is the output of the following code snippet?",
+        "code": "let person = {\n  birthYear: 1995,\n  getAge: function(currentYear) {\n    return currentYear - this.birthYear;\n  }\n};\n\nconsole.log(person.getAge(2024));",
+        "options": {
+            "A": "29",
+            "B": "30",
+            "C": "28",
+            "D": "NaN"
+        },
+        "answer": "A",
+        "explanation": "`person.birthYear` is 1995, and the function `getAge(2024)` returns `2024 - 1995 = 29`. Hence, the output is 29."
+    },
+    {
+        "id": 249,
+        "category": "JavaScript this/call",
+        "difficulty": "Easy",
+        "question": "What will be logged in the console?",
+        "code": "let animal = {\n  legs: 4,\n  describe() {\n    console.log(`This animal has ${this.legs} legs.`);\n  }\n};\n\nlet fish = { legs: 0 };\nanimal.describe.call(fish);",
+        "options": {
+            "A": "This animal has 4 legs.",
+            "B": "This animal has 0 legs.",
+            "C": "Undefined legs.",
+            "D": "This animal has 1 leg."
+        },
+        "answer": "B",
+        "explanation": "The `call()` method sets the `this` value inside `describe()` to the `fish` object. Since `fish.legs` is `0`, the output is: 'This animal has 0 legs.'"
+    },
+    {
+        "id": 250,
+        "category": "JavaScript this/bind",
+        "difficulty": "Easy",
+        "question": "What is the result?",
+        "code": "let dog = {\n  name: \"Buddy\",\n  sound: function() {\n    console.log(this.name + \" says woof!\");\n  }\n};\n\nlet soundFunc = dog.sound.bind({ name: \"Max\" });\nsoundFunc();",
+        "options": {
+            "A": "Buddy says woof!",
+            "B": "Max says woof!",
+            "C": "Undefined says woof!",
+            "D": "Error"
+        },
+        "answer": "B",
+        "explanation": "`bind()` sets the `this` context permanently to the provided object. In this case, `{ name: \"Max\" }` is bound to the function, so `this.name` becomes `Max`. The output is: 'Max says woof!'"
+    },
+    {
+        "id": 251,
+        "category": "JavaScript Promises",
+        "difficulty": "Easy",
+        "question": "Find the error in this Promise syntax:",
+        "code": "let promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    reject(\"An error occurred\");\n  }, 1000);\n});\n\npromise.then((result) => {\n  console.log(result);\n});",
+        "options": {
+            "A": "reject should be resolve.",
+            "B": "catch is needed to handle the error.",
+            "C": "Promises cannot use setTimeout.",
+            "D": "The code is correct."
+        },
+        "answer": "B",
+        "explanation": "The Promise rejects after 1 second, but there is no `.catch()` to handle the rejection. While the syntax is otherwise valid, the absence of a `.catch()` will result in an unhandled promise rejection."
+    },
+    {
+        "id": 252,
+        "category": "Promises",
+        "difficulty": "Easy",
+        "question": "What will happen with the following chain of promises if one promise rejects?",
+        "code": "promise1\n  .then(() => promise2)\n  .then(() => promise3)\n  .then(() => console.log(\"All done\"))\n  .catch(() => console.log(\"Error caught\"));",
+        "options": {
+            "A": "It will skip to the next then regardless of rejection",
+            "B": "It will only log \"All done\" if all promises are resolved",
+            "C": "It will never execute the catch",
+            "D": "It will log \"All done\" even if any promise is rejected"
+        },
+        "answer": "B",
+        "explanation": "In a promise chain, if any promise rejects and the rejection is not handled before the `.then()` for \"All done\", the chain skips remaining `.then()` handlers and moves directly to the `.catch()` block."
+    },
+    {
+        "id": 253,
+        "category": "Callbacks",
+        "difficulty": "Easy",
+        "question": "Identify the mistake in this code that fetches data with a callback:",
+        "code": "function fetchData(callback) {\n  setTimeout(() => {\n    let data = \"Server data\";\n    callback;\n  }, 1000);\n}\n\nfetchData((data) => console.log(data));",
+        "options": {
+            "A": "callback should be invoked with parentheses",
+            "B": "data is undefined",
+            "C": "callback should not take parameter",
+            "D": "setTimeout is unnecessary"
+        },
+        "answer": "A",
+        "explanation": "The callback is written as `callback;` which does nothing. It should be invoked using `callback(data);` to actually call the function and pass the `data`."
+    },
+    {
+        "id": 254,
+        "category": "Execution Order",
+        "difficulty": "Easy",
+        "question": "What is the output of the following code?",
+        "code": "console.log(\"Start\");\n\nsetTimeout(() => {\n  console.log(\"Task completed\");\n}, 1000);\n\nconsole.log(\"End\");",
+        "options": {
+            "A": "Start, Task completed, End",
+            "B": "Start, End, Task completed",
+            "C": "Task completed, Start, End",
+            "D": "End, Task completed, Start"
+        },
+        "answer": "B",
+        "explanation": "JavaScript executes code synchronously by default. The `setTimeout` function schedules the callback to run after 1000 milliseconds, but the main thread continues executing the synchronous code. So, 'Start' is logged first, then 'End', and after about 1 second, 'Task completed' is logged."
     }
 ]
